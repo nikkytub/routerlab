@@ -1,0 +1,91 @@
+system {
+    host-name lev-sj1;
+    root-authentication {
+        encrypted-password "$1$oyARqnIO$kGwmmGtJZnmVo20G4Qp8d1"; ## SECRET-DATA
+    }
+    services {
+        dhcp {
+            traceoptions {
+                file dhcp_logfile;
+                level all;
+                flag all;
+            }
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }                               
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+chassis {
+    auto-image-upgrade;
+}
+interfaces {
+    ge-0/0/0 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/1 {
+        description lev-rc1;
+        unit 0 {
+            family ethernet-switching {
+                port-mode trunk;
+                vlan {
+                    members [ vlan80 vlan85 ];
+                }                       
+            }
+        }
+    }
+    ge-0/0/2 {
+        description lev-rj2;
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members vlan85;
+                }
+            }
+        }
+    }
+    ge-0/0/3 {
+        description lev-rj1;
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members vlan80;
+                }
+            }                           
+        }
+    }
+}
+protocols {
+    rstp;
+    lldp-med {
+        interface all;
+    }
+}
+ethernet-switching-options {
+    storm-control {
+        interface all;
+    }
+}
+vlans {
+    vlan80 {
+        vlan-id 80;
+    }
+    vlan85 {
+        vlan-id 85;
+    }
+}
+

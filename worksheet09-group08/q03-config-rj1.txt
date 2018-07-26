@@ -1,0 +1,236 @@
+system {
+    host-name lev-rj1;
+    root-authentication {
+        encrypted-password "$1$2m/AYn5d$PzxO4ewjaDUJAf7SlcSFR1"; ## SECRET-DATA
+    }
+    name-server {
+        208.67.222.222;
+        208.67.220.220;
+    }
+    services {
+        ssh;
+        telnet;
+        xnm-clear-text;
+        web-management {
+            http {
+                interface vlan.0;
+            }
+            https {
+                system-generated-certificate;
+                interface vlan.0;
+            }
+        }                               
+    }
+    syslog {
+        archive size 100k files 3;
+        user * {
+            any emergency;
+        }
+        file messages {
+            any critical;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands error;
+        }
+    }
+    max-configurations-on-flash 5;
+    max-configuration-rollbacks 5;
+    license {
+        autoupdate {
+            url https://ae1.juniper.net/junos/key_retrieval;
+        }
+    }
+}
+interfaces {                            
+    ge-0/0/0 {
+        description lev-sj1;
+        vlan-tagging;
+        unit 80 {
+            vlan-id 80;
+            family inet {
+                address 10.8.0.2/24;
+            }
+        }
+        unit 83 {
+            vlan-id 83;
+            family inet {
+                address 10.8.3.1/24;
+            }
+        }
+    }
+    ge-0/0/1 {
+        description lev-rj2;
+        unit 0 {
+            family inet {
+                address 10.8.6.1/24;
+            }
+        }                               
+    }
+    ge-0/0/2 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/3 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/4 {
+        description leverkusen;
+        disable;
+        unit 0;
+    }
+    ge-0/0/5 {
+        description langenfeld;
+        disable;
+        unit 0;
+    }
+    ge-0/0/6 {
+        disable;
+        unit 0;
+    }                                   
+    ge-0/0/7 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/8 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/9 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/10 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/11 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/12 {
+        disable;
+        unit 0;                         
+    }
+    ge-0/0/13 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/14 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/15 {
+        disable;
+        unit 0;
+    }
+    vlan {
+        unit 0 {
+            family inet;
+        }
+    }
+}
+routing-options {
+    autonomous-system 65003;
+}
+protocols {                             
+    bgp {
+        group external-peers {
+            type external;
+            export send-direct;
+            neighbor 10.8.0.1 {
+                peer-as 65001;
+            }
+            neighbor 10.8.6.2 {
+                import local-pref-high;
+                peer-as 65002;
+            }
+        }
+    }
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/2.0;
+            interface ge-0/0/3.0;
+        }
+        area 0.0.0.1 {
+            interface ge-0/0/1.0;
+            interface ge-0/0/0.22;
+        }
+        area 0.0.0.2 {                  
+            interface ge-0/0/0.21;
+        }
+    }
+    lldp {
+        interface all;
+    }
+    stp;
+}
+policy-options {
+    policy-statement local-pref-high {
+        term 1 {
+            from protocol bgp;
+            then {
+                local-preference 10000;
+            }
+        }
+    }
+    policy-statement send-direct {
+        term 1 {
+            from protocol direct;
+            then accept;
+        }
+    }                                   
+}
+security {
+    forwarding-options {
+        family {
+            inet6 {
+                mode flow-based;
+            }
+        }
+    }
+    policies {
+        from-zone anywhere to-zone anywhere {
+            policy trust-everything {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+    }                                   
+    zones {
+        security-zone anywhere {
+            host-inbound-traffic {
+                system-services {
+                    ping;
+                    traceroute;
+                }
+                protocols {
+                    all;
+                    bgp;
+                }
+            }
+            interfaces {
+                all;
+            }
+        }
+    }
+}
+vlans {
+    vlan-trust {
+        vlan-id 3;
+        l3-interface vlan.0;
+    }                                   
+    vlan80 {
+        vlan-id 80;
+    }
+    vlan83 {
+        vlan-id 83;
+    }
+}

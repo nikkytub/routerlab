@@ -1,0 +1,178 @@
+lev-sc1#show running-config 
+Building configuration...
+
+Current configuration : 2328 bytes
+!
+! Last configuration change at 08:03:47 UTC Sat Apr 2 2011
+! NVRAM config last updated at 06:26:24 UTC Wed Mar 30 2011
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lev-sc1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$gj.5$LkPNMlLfyimAUGH708zgh/
+!
+no aaa new-model
+switch 1 provision ws-c2960s-24td-l
+!
+!
+no ip domain-lookup
+vtp mode off
+!         
+!         
+!         
+spanning-tree mode pvst
+spanning-tree extend system-id
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+vlan internal allocation policy ascending
+!         
+vlan 10,12,20-23,51-52,81-85,100,104,111-114,300-304 
+!         
+vlan 701  
+ name lg-rc1
+!         
+vlan 702  
+ name lg3-rj1
+!         
+vlan 703  
+ name rc1-rj1
+!         
+vlan 3000 
+!         
+lldp run  
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+interface FastEthernet0
+ no ip address
+!         
+interface GigabitEthernet1/0/1
+ description lg1
+!         
+interface GigabitEthernet1/0/2
+ description lg2
+ shutdown 
+!         
+interface GigabitEthernet1/0/3
+ description lg3
+ shutdown 
+!         
+interface GigabitEthernet1/0/4
+ description lg4
+ shutdown 
+!         
+interface GigabitEthernet1/0/5
+ description lg5
+ shutdown 
+!         
+interface GigabitEthernet1/0/6
+ description wubalubadubdub
+ shutdown 
+!         
+interface GigabitEthernet1/0/7
+ shutdown 
+!         
+interface GigabitEthernet1/0/8
+ shutdown 
+!         
+interface GigabitEthernet1/0/9
+ shutdown 
+!         
+interface GigabitEthernet1/0/10
+ shutdown 
+!         
+interface GigabitEthernet1/0/11
+ shutdown 
+!         
+interface GigabitEthernet1/0/12
+ description lev-rc1
+!         
+interface GigabitEthernet1/0/13
+ description lev-sj1
+ shutdown 
+!         
+interface GigabitEthernet1/0/14
+ description lev-rj2
+ shutdown 
+!         
+interface GigabitEthernet1/0/15
+ shutdown 
+!         
+interface GigabitEthernet1/0/16
+ shutdown 
+!         
+interface GigabitEthernet1/0/17
+ shutdown 
+!         
+interface GigabitEthernet1/0/18
+ shutdown 
+!         
+interface GigabitEthernet1/0/19
+ shutdown 
+!         
+interface GigabitEthernet1/0/20
+ shutdown 
+!         
+interface GigabitEthernet1/0/21
+ shutdown 
+!         
+interface GigabitEthernet1/0/22
+ shutdown 
+!         
+interface GigabitEthernet1/0/23
+ shutdown 
+!         
+interface GigabitEthernet1/0/24
+ shutdown 
+!         
+interface GigabitEthernet1/0/25
+ shutdown 
+!         
+interface GigabitEthernet1/0/26
+ shutdown 
+!         
+interface TenGigabitEthernet1/0/1
+ shutdown 
+!         
+interface TenGigabitEthernet1/0/2
+ shutdown 
+!         
+interface Vlan1
+ no ip address
+!         
+ip http server
+ip http secure-server
+!         
+no cdp run
+!         
+!         
+!         
+line con 0
+line vty 0 4
+ no login 
+line vty 5 15
+ no login 
+!         
+end 

@@ -1,0 +1,151 @@
+Building configuration...
+
+Current configuration : 1996 bytes
+!
+! Last configuration change at 17:06:23 UTC Mon May 14 2018
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lev-rc1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$Z0/3$Nr3iizJNGa8AsxSqY6TgS.
+!
+no aaa new-model
+!
+!
+ip cef
+!
+!
+!         
+!
+
+
+!
+!
+!
+!
+ipv6 unicast-routing
+ipv6 cef
+!
+!
+multilink bundle-name authenticated
+license udi pid C892FSP-K9 sn FCZ1917C10D
+!
+!
+!
+!
+!
+!
+!
+lldp run
+! 
+!         
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 100.100.100.100 255.255.255.255
+!
+interface GigabitEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1
+ description lev-sj1
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+!         
+interface GigabitEthernet3
+ no ip address
+ shutdown
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8
+ description lev-rj2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9
+ description lev-sc1
+ no ip address
+ ip flow ingress
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9.82
+ encapsulation dot1Q 82
+ ip address 10.8.1.1 255.255.255.248
+ ip flow ingress
+ ipv6 address FC00:470:525B:F801::1/64
+ no cdp enable
+!
+interface GigabitEthernet9.83
+ encapsulation dot1Q 83
+ ip address 10.8.3.1 255.255.255.248
+ ipv6 address FC00:470:525B:F803::1/64
+ no cdp enable
+!         
+interface GigabitEthernet9.84
+ encapsulation dot1Q 84
+ ip address 10.8.4.1 255.255.255.248
+ ipv6 address FC00:470:525B:F804::1/64
+ no cdp enable
+!
+interface Vlan1
+ no ip address
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+ip flow-export source Loopback0
+ip flow-export destination 10.8.3.2 7777
+!
+!
+no cdp run
+!
+!
+control-plane
+!
+!         
+!
+line con 0
+ no modem enable
+line aux 0
+line vty 0 4
+ login
+ transport input all
+!
+scheduler allocate 20000 1000
+!
+end

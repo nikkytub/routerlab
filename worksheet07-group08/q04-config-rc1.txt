@@ -1,0 +1,173 @@
+Current configuration : 1998 bytes
+!
+! Last configuration change at 17:07:14 UTC Mon Jun 18 2018
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lev-rc1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$Z0/3$Nr3iizJNGa8AsxSqY6TgS.
+!
+no aaa new-model
+!
+!
+ip cef
+!
+!
+!         
+!
+
+
+!
+!
+!
+!
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+license udi pid C892FSP-K9 sn FCZ1917C10D
+!
+!
+vtp mode transparent
+!
+!
+!
+!
+!
+vlan 10
+ name vlan_10
+!         
+vlan 11
+ name vlan_11
+!
+vlan 12-14,80 
+!
+vlan 82
+ name vlan82
+!
+vlan 83,85 
+!
+vlan 92
+ name 92
+!
+vlan 93
+ name 93
+!
+vlan 703
+ name VLAN703
+!
+vlan 705
+ name area0
+!
+lldp run  
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1
+ description lev-sj1
+ switchport mode trunk
+ no ip address
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8
+ description lev-rj2
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9
+ description lev-sc1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9.81
+ encapsulation dot1Q 81
+ ip address 10.8.1.1 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet9.82
+ encapsulation dot1Q 82
+ ip address 10.8.2.1 255.255.255.0
+ no cdp enable
+!
+interface Vlan1
+ no ip address
+!
+interface Vlan80
+ ip address 10.8.0.1 255.255.255.0
+!
+interface Vlan85
+ ip address 10.8.5.1 255.255.255.0
+!
+router rip
+ network 10.0.0.0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!
+!
+no cdp run
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ no modem enable
+line aux 0
+line vty 0 4
+ login
+ transport input all
+line vty 5 15
+ login
+ transport input none
+!
+scheduler allocate 20000 1000
+!
+end
+

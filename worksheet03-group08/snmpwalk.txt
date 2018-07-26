@@ -1,0 +1,811 @@
+root@group08-lg3:~# snmpwalk -v1 -Of -c OUR_SECRET 10.8.3.1 iso.org.dod.internet.mgmt.mib-2.system
+.iso.org.dod.internet.mgmt.mib-2.system.sysDescr.0 = STRING: Cisco IOS Software, C800 Software (C800-UNIVERSALK9-M), Version 15.2(4)M6, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Wed 19-Mar-14 20:07 by prod_rel_team
+.iso.org.dod.internet.mgmt.mib-2.system.sysObjectID.0 = OID: .iso.org.dod.internet.private.enterprises.9.1.1620
+.iso.org.dod.internet.mgmt.mib-2.system.sysUpTime.sysUpTimeInstance = Timeticks: (414864) 1:09:08.64
+.iso.org.dod.internet.mgmt.mib-2.system.sysContact.0 = STRING: ourcontact
+.iso.org.dod.internet.mgmt.mib-2.system.sysName.0 = STRING: lev-rc1
+.iso.org.dod.internet.mgmt.mib-2.system.sysLocation.0 = STRING: sweethome
+.iso.org.dod.internet.mgmt.mib-2.system.sysServices.0 = INTEGER: 78
+.iso.org.dod.internet.mgmt.mib-2.system.sysORLastChange.0 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.1 = OID: .iso.org.dod.internet.private.enterprises.9.7.129
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.2 = OID: .iso.org.dod.internet.private.enterprises.9.7.115
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.3 = OID: .iso.org.dod.internet.private.enterprises.9.7.265
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.4 = OID: .iso.org.dod.internet.private.enterprises.9.7.112
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.5 = OID: .iso.org.dod.internet.private.enterprises.9.7.106
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.6 = OID: .iso.org.dod.internet.private.enterprises.9.7.47
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.7 = OID: .iso.org.dod.internet.private.enterprises.9.7.122
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.8 = OID: .iso.org.dod.internet.private.enterprises.9.7.43
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.9 = OID: .iso.org.dod.internet.private.enterprises.9.7.37
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.10 = OID: .iso.org.dod.internet.private.enterprises.9.7.92
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.11 = OID: .iso.org.dod.internet.private.enterprises.9.7.53
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.12 = OID: .iso.org.dod.internet.private.enterprises.9.7.54
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.13 = OID: .iso.org.dod.internet.private.enterprises.9.7.52
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.14 = OID: .iso.org.dod.internet.private.enterprises.9.7.93
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.15 = OID: .iso.org.dod.internet.private.enterprises.9.7.186
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.16 = OID: .iso.org.dod.internet.private.enterprises.9.7.128
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.17 = OID: .iso.org.dod.internet.private.enterprises.9.7.425
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.18 = OID: .iso.org.dod.internet.private.enterprises.9.7.517
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.19 = OID: .iso.org.dod.internet.private.enterprises.9.7.516
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.20 = OID: .iso.org.dod.internet.private.enterprises.9.7.518
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.21 = OID: .iso.org.dod.internet.private.enterprises.9.7.267
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.22 = OID: .iso.org.dod.internet.private.enterprises.9.7.273
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.23 = OID: .iso.org.dod.internet.private.enterprises.9.7.265
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.24 = OID: .iso.org.dod.internet.private.enterprises.9.7.121
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.25 = OID: .iso.org.dod.internet.private.enterprises.9.7.44
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.26 = OID: .iso.org.dod.internet.private.enterprises.9.7.99999
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.27 = OID: .iso.org.dod.internet.private.enterprises.9.7.202
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.28 = OID: .iso.org.dod.internet.private.enterprises.9.7.264
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.29 = OID: .iso.org.dod.internet.private.enterprises.9.7.33
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.30 = OID: .iso.org.dod.internet.private.enterprises.9.7.492
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.31 = OID: .iso.org.dod.internet.private.enterprises.9.7.130
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.32 = OID: .iso.org.dod.internet.private.enterprises.9.7.116
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.33 = OID: .iso.org.dod.internet.private.enterprises.9.7.91
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.34 = OID: .iso.org.dod.internet.private.enterprises.9.7.999
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.35 = OID: .iso.org.dod.internet.private.enterprises.9.7.212
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.36 = OID: .iso.org.dod.internet.private.enterprises.9.7.547
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.37 = OID: .iso.org.dod.internet.private.enterprises.9.7.126
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.38 = OID: .iso.org.dod.internet.private.enterprises.9.7.127
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.39 = OID: .iso.org.dod.internet.private.enterprises.9.7.64
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.40 = OID: .iso.org.dod.internet.private.enterprises.9.7.123
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.41 = OID: .iso.org.dod.internet.private.enterprises.9.7.120
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.42 = OID: .iso.org.dod.internet.private.enterprises.9.7.124
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.43 = OID: .iso.org.dod.internet.private.enterprises.9.7.218
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.44 = OID: .iso.org.dod.internet.private.enterprises.9.7.119
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.45 = OID: .iso.org.dod.internet.private.enterprises.9.7.125
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.46 = OID: .iso.org.dod.internet.private.enterprises.9.7.524
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.47 = OID: .iso.org.dod.internet.private.enterprises.9.7.45
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.48 = OID: .iso.org.dod.internet.private.enterprises.9.7.605
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.49 = OID: .iso.org.dod.internet.private.enterprises.9.7.46
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.50 = OID: .iso.org.dod.internet.private.enterprises.9.7.557
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.51 = OID: .iso.org.dod.internet.private.enterprises.9.7.604
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.52 = OID: .iso.org.dod.internet.private.enterprises.9.7.203
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.53 = OID: .iso.org.dod.internet.private.enterprises.9.7.201
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.54 = OID: .iso.org.dod.internet.private.enterprises.9.7.1
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.55 = OID: .iso.org.dod.internet.private.enterprises.9.7.202
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.56 = OID: .iso.org.dod.internet.private.enterprises.9.7.440
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.57 = OID: .iso.org.dod.internet.private.enterprises.9.7.463
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.58 = OID: .iso.org.dod.internet.private.enterprises.9.7.16
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.59 = OID: .iso.org.dod.internet.private.enterprises.9.7.17
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.60 = OID: .iso.org.dod.internet.private.enterprises.9.7.36
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.61 = OID: .iso.org.dod.internet.private.enterprises.9.7.447
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.62 = OID: .iso.org.dod.internet.private.enterprises.9.7.548
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.63 = OID: .iso.org.dod.internet.private.enterprises.9.7.256
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.64 = OID: .iso.org.dod.internet.private.enterprises.9.7.101
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.65 = OID: .iso.org.dod.internet.private.enterprises.9.7.105
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.66 = OID: .iso.org.dod.internet.private.enterprises.9.7.108
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.67 = OID: .iso.org.dod.internet.private.enterprises.9.7.117
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.68 = OID: .iso.org.dod.internet.private.enterprises.9.7.103
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.69 = OID: .iso.org.dod.internet.private.enterprises.9.7.107
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.70 = OID: .iso.org.dod.internet.private.enterprises.9.7.109
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.71 = OID: .iso.org.dod.internet.private.enterprises.9.7.110
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.72 = OID: .iso.org.dod.internet.private.enterprises.9.7.111
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.73 = OID: .iso.org.dod.internet.private.enterprises.9.7.102
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.74 = OID: .iso.org.dod.internet.private.enterprises.9.7.102
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.75 = OID: .iso.org.dod.internet.private.enterprises.9.7.120
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.76 = OID: .iso.org.dod.internet.private.enterprises.9.7.115
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.77 = OID: .iso.org.dod.internet.private.enterprises.9.7.172
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.78 = OID: .iso.org.dod.internet.private.enterprises.9.7.28
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.79 = OID: .iso.org.dod.internet.private.enterprises.9.7.117
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.80 = OID: .iso.org.dod.internet.private.enterprises.9.7.39
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.81 = OID: .iso.org.dod.internet.private.enterprises.9.7.113
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.82 = OID: .iso.org.dod.internet.private.enterprises.9.7.114
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.83 = OID: .iso.org.dod.internet.private.enterprises.9.7.104
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.84 = OID: .iso.org.dod.internet.private.enterprises.9.7.26
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.85 = OID: .iso.org.dod.internet.private.enterprises.9.7.51
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.86 = OID: .iso.org.dod.internet.private.enterprises.9.7.532
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.87 = OID: .iso.org.dod.internet.private.enterprises.9.7.118
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.88 = OID: .iso.org.dod.internet.private.enterprises.9.7.599
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.89 = OID: .iso.org.dod.internet.private.enterprises.9.7.82
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.90 = OID: .iso.org.dod.internet.private.enterprises.9.7.83
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.91 = OID: .iso.org.dod.internet.private.enterprises.9.7.84
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.92 = OID: .iso.org.dod.internet.private.enterprises.9.7.408
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.93 = OID: .iso.org.dod.internet.private.enterprises.9.7.409
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.94 = OID: .iso.org.dod.internet.private.enterprises.9.7.213
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.95 = OID: .iso.org.dod.internet.private.enterprises.9.7.1
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.96 = OID: .iso.org.dod.internet.private.enterprises.9.7.2
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.97 = OID: .iso.org.dod.internet.private.enterprises.9.7.3
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.98 = OID: .iso.org.dod.internet.private.enterprises.9.7.4
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.99 = OID: .iso.org.dod.internet.private.enterprises.9.7.5
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.100 = OID: .iso.org.dod.internet.private.enterprises.9.7.6
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.101 = OID: .iso.org.dod.internet.private.enterprises.9.7.7
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.102 = OID: .iso.org.dod.internet.private.enterprises.9.7.8
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.103 = OID: .iso.org.dod.internet.private.enterprises.9.7.9
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.104 = OID: .iso.org.dod.internet.private.enterprises.9.7.10
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.105 = OID: .iso.org.dod.internet.private.enterprises.9.7.11
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.106 = OID: .iso.org.dod.internet.private.enterprises.9.7.12
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORID.107 = OID: .iso.org.dod.internet.private.enterprises.9.7.13
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.1 = STRING: Agent capabilities for CISCO-AAA-SERVER-MIB
+ LAST-UPDATED 200001200000Z 
+ciscoAAAServerCapabilityV10R00 AGENT-CAPABILITIES
+ SUPPORTS CISCO-AAA-SERVER-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.2 = STRING: Agent capabilities for CISCO-ALPS-MIB
+ LAST-UPDATED 9710270000Z 
+ciscoAlpsCapabilityV01R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-ALPS-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.3 = STRING: The Agent Capabilities for 
+                CISCO-ATM-PVCTRAP-EXTN-MIB.
+ LAST-UPDATED 200211060000Z 
+ciscoATMPVCTRAPExtnCapabilityV12R00S AGENT-CAPABILITIES
+ SUPPORTS CISCO-ATM-PVCTRAP-EXTN-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.4 = STRING: Agent capabilities for BGP4-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoBgp4CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS BGP4-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.5 = STRING: Agent capabilities for the BRIDGE-MIB
+ LAST-UPDATED 201012010000Z 
+ciscoBridgeCapabilityV10R02 AGENT-CAPABILITIES
+ SUPPORTS BRIDGE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.6 = STRING: Agent capabilities for CALL-HISTORY-MIB
+ LAST-UPDATED 9611190000Z 
+ciscoCallHistoryCapabilityV11R02 AGENT-CAPABILITIES
+SUPPORTS CISCO-CALL-HISTORY-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.7 = STRING: The agent capabilities for CISCO-CAS-IF-MIB.
+ LAST-UPDATED 200912040000Z 
+ciscoCasIfCapabilityV5R015 AGENT-CAPABILITIES
+ SUPPORTS CISCO-CAS-IF-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.8 = STRING: Agent capabilities for CISCO-CDP-MIB
+ LAST-UPDATED 0506010000Z 
+ciscoCdpCapabilityV11R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-CDP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.9 = STRING: Agent capabilities for the CHANNEL-MIB
+ LAST-UPDATED 9712150000Z 
+ciscoChannelCapabilityV12R00 AGENT-CAPABILITIES
+SUPPORTS CISCO-CHANNEL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.10 = STRING: Agent capabilities for the CISCO-CIPCMPC-MIB
+ LAST-UPDATED 9702190000Z 
+ciscoCipCmpcCapabilityV11R03 AGENT-CAPABILITIES
+ SUPPORTS CISCO-CIPCMPC-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.11 = STRING: Agent capabilities for the CISCO-CIPCSNA-MIB
+ LAST-UPDATED 9504160000Z 
+ciscoCipCsnaCapabilityV11R00 AGENT-CAPABILITIES
+SUPPORTS CISCO-CIPCSNA-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.12 = STRING: Agent capabilities for the CISCO-CIPLAN-MIB
+ LAST-UPDATED 9504160000Z 
+ciscoCipLanCapabilityV11R00 AGENT-CAPABILITIES
+SUPPORTS CISCO-CIPLAN-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.13 = STRING: Agent capabilities for the CISCO-CIPTCPIP-MIB
+ LAST-UPDATED 200207120000Z 
+ciscoCipTcpIpCapabilityV12R02T AGENT-CAPABILITIES
+SUPPORTS CISCO-CIPTCPIP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.14 = STRING: Agent capabilities for the CISCO-CIPTG-MIB
+ LAST-UPDATED 9901250000Z 
+ciscoCipTgCapabilityV12R03T AGENT-CAPABILITIES
+ SUPPORTS CISCO-CIPTG-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.15 = STRING: Agent capabilities for 
+                                 CLASS-BASED-QOS-MIB
+ LAST-UPDATED 200301240000Z 
+ciscoCBQosMibCapabilityV123R01T AGENT-CAPABILITIES
+SUPPORTS CISCO-CLASS-BASED-QOS-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.16 = STRING: This is the Agent Capabilities for
+                         CISCO-CONFIG_COPY-MIB.
+ LAST-UPDATED 200403170000Z 
+ciscoConfigCopyCapabilityV2R0175 AGENT-CAPABILITIES
+SUPPORTS CISCO-CONFIG-COPY-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.17 = STRING: Agent capabilities for CISCO-DATA-COLLECTION-MIB
+LAST-UPDATED 200501050000Z 
+cDataCollectionCapabilityV12R0S AGENT-CAPABILITIES
+SUPPORTS CISCO-DATA-COLLECTION-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.18 = STRING: The capabilities description of
+            CISCO-DIAMETER-BASE-PROTOCOL-MIB.
+ LAST-UPDATED 200609061130Z 
+ciscoDiameterBasePCapabilityV12R0409XG AGENT-CAPABILITIES
+ SUPPORTS CISCO-DIAMETER-BASE-PROTOCOL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.19 = STRING: The capabilities description of
+            CISCO-DIAMETER-CC-AAPL-MIB.
+ LAST-UPDATED 200609060000Z 
+ciscoDiameterCCACapabilityV12R0409XG AGENT-CAPABILITIES
+ SUPPORTS CISCO-DIAMETER-CC-APPL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.20 = STRING: The capabilities description of
+            CISCO-DIAMETER-SG-MIB.
+ LAST-UPDATED 200609070000Z 
+ciscoDiameterSGCapabilityV12R0409XG AGENT-CAPABILITIES
+ SUPPORTS CISCO-DIAMETER-SG-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.21 = STRING: Agent capabilities for CISCO-DIST-DIRECTOR-MIB
+ LAST-UPDATED 200204230000Z 
+ciscoDistDirCapabilityV12R02 AGENT-CAPABILITIES
+ SUPPORTS CISCO-DIST-DIRECTOR-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.22 = STRING: The agent capabilities for DS1-MIB for Cisco Products Series.
+        - ciscoDs1AxsmeCapabilityV3R00 is for
+
+          Enhanced ATM Switch Service Module(AXSM-E), and
+
+          Enhanced Processor Switch Module 1(PXM1E) uplink.
+
+
+
+        - ciscoDs1CapabilityV5R00 is for Voice Switch
+
+          Service Module(VXSM) and MPSM Module Release 5.0.0.
+ LAST-UPDATED 200710310000Z 
+ciscoDs1CapabilityV5R500 AGENT-CAPABILITIES
+ SUPPORTS DS1-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.23 = STRING: The Agent Capabilities for DS3-MIB(RFC 2496).
+ LAST-UPDATED 200705150000Z 
+ciscoDs3CapabilityV5R100 AGENT-CAPABILITIES
+ SUPPORTS DS3-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.24 = STRING: The agent capabilities for CISCO-DSP-MGMT-MIB.
+ LAST-UPDATED 201104180000Z 
+ciscoDspMgmtCapabilityV5R400 AGENT-CAPABILITIES
+ SUPPORTS CISCO-DSP-MGMT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.25 = STRING: Agent capabilities for the DSPU-MIB
+ LAST-UPDATED 9501250000Z 
+ciscoDspuCapabilityV11R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-DSPU-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.26 = STRING: 200701110000Z
+    DESCRIPTION
+
+        
+ LAST-UPDATED 200701110000Z 
+ciscoEmbeddedEventMgrCapabilityV12R02SXH AGENT-CAPABILITIES
+ SUPPORTS CISCO-EMBEDDED-EVENT-MGR-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.27 = STRING: Agent capabilities for
+                         CISCO-ENHANCED-MEMPOOL-MIB
+ LAST-UPDATED 200704160000Z 
+cempCapabilityV12R03T AGENT-CAPABILITIES
+ SUPPORTS CISCO-ENHANCED-MEMPOOL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.28 = STRING: The Agent Capabilities for CISCO-ENTITY-FRU-CONTROL-MIB.
+ LAST-UPDATED 200912140000Z 
+ciscoEntityFruControlCapabilityV2R00 AGENT-CAPABILITIES
+ SUPPORTS CISCO-ENTITY-FRU-CONTROL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.29 = STRING: Agent capabilities for CISCO-ENVMON-MIB.
+ LAST-UPDATED 200705180000Z 
+ciscoEnvMonCapV12R05TPMARS AGENT-CAPABILITIES
+ SUPPORTS CISCO-ENVMON-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.30 = STRING: Agent capabilities for CISCO-ERM-MIB
+
+
+    REVISION 
+ LAST-UPDATED 200603090000Z 
+ciscoErmCapabilityV12R02SR AGENT-CAPABILITIES
+SUPPORTS CISCO-ERM-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.31 = STRING: Agent capabilities for ETHERLIKE-MIB (RFC 2665).
+ LAST-UPDATED 0001211400Z 
+ciscoEtherlikeCapabilityV12R01 AGENT-CAPABILITIES
+SUPPORTS ETHERLIKE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.32 = STRING: Agent capabilities for RFC 1512 FDDI MIB.
+ LAST-UPDATED 9411080000Z 
+fddiCapabilityV10R03 AGENT-CAPABILITIES
+SUPPORTS FDDI-SMT73-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.33 = STRING: Agent capabilities for the FRAS Host MIB
+ LAST-UPDATED 9702120000Z 
+ciscoFrasHostCapabilityV11R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-FRAS-HOST-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.34 = STRING: Agent capabilities for CISCO-GATEKEEPER-MIB
+ LAST-UPDATED 200004170000Z 
+ciscoGatekeeperCapabilityV12R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-GATEKEEPER-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.35 = STRING: Agent capabilities for CISCO-GPRS-GTP-MIB
+ LAST-UPDATED 200112201600Z 
+cgprsGtpCapabilityV12R02 AGENT-CAPABILITIES
+ SUPPORTS CISCO-GPRS-GTP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.36 = STRING: Agent capabilities for HOST-RESOURCES-MIB
+ LAST-UPDATED 200709170000Z 
+ciscoHostResourcesCapabilityV12R04 AGENT-CAPABILITIES
+ SUPPORTS HOST-RESOURCES-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.37 = STRING: Agent capabilities for CISCO-HSRP-MIB
+ LAST-UPDATED 9808250000Z 
+ciscoHsrpCapabilityV12R0 AGENT-CAPABILITIES
+SUPPORTS CISCO-HSRP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.38 = STRING: Agent capabilities for CISCO-HSRP-EXT-MIB
+ LAST-UPDATED 9808250000Z 
+ciscoHsrpExtCapabilityV12R0 AGENT-CAPABILITIES
+SUPPORTS CISCO-HSRP-EXT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.39 = STRING: Integrated CSU/DSU MIB module.  For T1 and Switched 56 kbps
+                        interfaces.
+ LAST-UPDATED 9601210000Z 
+ciscoICsuDsuCapabilityV11R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-ICSUDSU-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.40 = STRING: Agent capabilities for DIAL-CONTROL-MIB
+ LAST-UPDATED 9709170000Z 
+ciscoIetfDialControlCapabilityV11R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-IETF-DIAL-CONTROL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.41 = STRING: Agent capabilities for DLSW-MIB
+ LAST-UPDATED 9702280000Z 
+ciscoIetfDlswCapabilityV11R00 AGENT-CAPABILITIES
+SUPPORTS DLSW-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.42 = STRING: Agent capabilities for ISDN-MIB (IETF RFC2127)
+ LAST-UPDATED 9806210000Z 
+ciscoIetfIsdnCapabilityV11R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-IETF-ISDN-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.43 = STRING: Agent capabilities for NAT-MIB
+ LAST-UPDATED 200109100000Z 
+ciscoIetfNatCapabilityV12R02T AGENT-CAPABILITIES
+SUPPORTS CISCO-IETF-NAT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.44 = STRING: Agent capabilities for TCP-MIB
+ LAST-UPDATED 9611270000Z 
+ciscoIetfTcpCapabilityV11R02 AGENT-CAPABILITIES
+SUPPORTS TCP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.45 = STRING: Modification of linkDown trap objects
+                 and ifLastChange object
+ LAST-UPDATED 200301210000Z 
+ciscoIfCapabilityFrsm12V3R00 AGENT-CAPABILITIES
+SUPPORTS IF-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.46 = STRING: 200611240000Z
+    DESCRIPTION
+
+        
+ LAST-UPDATED 200611240000Z 
+ciscoImaExtAxsmeCapabilityV5R320 AGENT-CAPABILITIES
+ SUPPORTS CISCO-IMA-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.47 = STRING: Agent capabilities for CISCO-IMAGE-MIB
+ LAST-UPDATED 9501250000Z 
+ciscoImageMIBCapabilityV10R01 AGENT-CAPABILITIES
+SUPPORTS CISCO-IMAGE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.48 = STRING: Agent capabilities for CISCO-IPSLA-VIDEO-PROFILE-MIB
+ LAST-UPDATED 201106010000Z 
+ciscoIpslaVideoProfileCapabilityV152R02T AGENT-CAPABILITIES
+ SUPPORTS CISCO-IPSLA-VIDEO-PROFILE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.49 = STRING: Agent capabilities for CISCO-ISDN-MIB
+ LAST-UPDATED 9503100000Z 
+ciscoIsdnCapabilityV10R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-ISDN-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.50 = STRING: Agent capabilities for Job-Monitoring-MIB
+ LAST-UPDATED 200706070000Z 
+ciscoJobMonitoringCapabilityV12R04 AGENT-CAPABILITIES
+ SUPPORTS Job-Monitoring-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.51 = STRING: Agent capabilities for CISCO-MEDIA-QUALITY-MIB.
+ LAST-UPDATED 201109230000Z 
+ciscoMediaQualityCapabilityV152R02 AGENT-CAPABILITIES
+ SUPPORTS CISCO-MEDIA-QUALITY-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.52 = STRING: Agent capabilities for MIP-MIB 
+                        (MobileIP MIB).
+ LAST-UPDATED 200312240000Z 
+ciscoMIPCapabilityV12R0304T AGENT-CAPABILITIES
+SUPPORTS MIP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.53 = STRING: Agent capabilities for CISCO-MMAIL-DIAL-CONTROL-MIB
+ LAST-UPDATED 9806010000Z 
+ciscoMediaMailControlCapabilityV12R00 AGENT-CAPABILITIES
+SUPPORTS CISCO-MMAIL-DIAL-CONTROL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.54 = STRING: 200607310000Z
+    DESCRIPTION
+
+            
+ LAST-UPDATED 200607310000Z 
+ciscoModemMgmtCapV12R4TISR AGENT-CAPABILITIES
+ SUPPORTS CISCO-MODEM-MGMT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.55 = STRING: Agent capabilities for MSDP-MIB
+ LAST-UPDATED 200008220000Z 
+ciscoMsdpCapabilityV12R01T AGENT-CAPABILITIES
+SUPPORTS DRAFT-MSDP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.56 = STRING: The capabilities description of CISCO-NAC-NAD-MIB.
+
+
+        REVISION        
+ LAST-UPDATED 200612120000Z 
+ciscoNacNadCapIOSV12R04012T AGENT-CAPABILITIES
+ SUPPORTS CISCO-NAC-NAD-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.57 = STRING: Agent capabilities for NOTIFICATION-LOG-MIB
+ LAST-UPDATED 200511180000Z 
+cNotificationLogCapabilityV12R04 AGENT-CAPABILITIES
+ SUPPORTS NOTIFICATION-LOG-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.58 = STRING: Agent capabilities for NOVELL-IPX-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoNovellIpxCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS NOVELL-IPX-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.59 = STRING: Agent capabilities for NOVELL-RIPSAP-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoNovellRipSapCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS NOVELL-RIPSAP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.60 = STRING: Agent capabilities for CISCO-PING-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoPingCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS CISCO-PING-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.61 = STRING: Agent capabilities for CISCO-POP-MGMT-MIB.
+ LAST-UPDATED 200510120000Z 
+ciscoPopMgmtCapabilityV12R04 AGENT-CAPABILITIES
+SUPPORTS CISCO-POP-MGMT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.62 = STRING: Agent capabilities for Printer-MIB
+ LAST-UPDATED 200706070000Z 
+ciscoPrinterCapabilityV12R04 AGENT-CAPABILITIES
+ SUPPORTS Printer-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.63 = STRING: Agent capabilities for CISCO-PROCESS-MIB
+ LAST-UPDATED 200411050000Z 
+ciscoProcessCapabilityV12R03T AGENT-CAPABILITIES
+SUPPORTS CISCO-PROCESS-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.64 = STRING: Agent capabilities for the RFC1213-MIB (MIB-II)
+ LAST-UPDATED 200109081600Z 
+ciscoRFC1213CapabilityV12R02 AGENT-CAPABILITIES
+SUPPORTS RFC1213-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.65 = STRING: Agent capabilities for RFC1231-MIB (Token Ring MIB)
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1231CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1231-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.66 = STRING: Agent capabilities for RFC1243-MIB (Appletalk MIB)
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1243CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1243-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.67 = STRING: Agent capabilities for the OSPF MIB.
+ LAST-UPDATED 9411220000Z 
+ospfCapabilityV10R01 AGENT-CAPABILITIES
+SUPPORTS RFC1253-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.68 = STRING: Agent capabilities for RFC1285-MIB (FDDI MIB)
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1285CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1285-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.69 = STRING: Agent capabilities for RFC1315-MIB (Frame Relay MIB)
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1315CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1315-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.70 = STRING: Agent capabilities for RFC1381-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1381CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1381-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.71 = STRING: Agent capabilities for RFC1382-MIB (X.25 MIB)
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1382CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1382-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.72 = STRING: Agent capabilities for RFC1398-MIB (Ethernet MIB).
+ LAST-UPDATED 9408180000Z 
+ciscoRFC1398CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RFC1398-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.73 = STRING: Agent capabilities for RFC1406-MIB (DS1 MIB)
+ LAST-UPDATED 200307080000Z 
+ciscoRFC1406CapabilityV122R12T AGENT-CAPABILITIES
+SUPPORTS RFC1406-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.74 = STRING: Agent capabilities for RFC1407-MIB (DS3 MIB)
+ LAST-UPDATED 200108170000Z 
+ciscoRFC1407CapabilityV122R12 AGENT-CAPABILITIES
+SUPPORTS RFC1407-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.75 = STRING: Agent capabilities for RFC1595-MIB (SONET MIB)
+ LAST-UPDATED 9607290000Z 
+ciscoRFC1595CapabilityV11R01 AGENT-CAPABILITIES
+SUPPORTS RFC1595-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.76 = STRING: Agent capabilities for RS-232-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoRS232CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS RS-232-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.77 = STRING: Agent capabilities for the CISCO-SIP-UA-MIB.
+ LAST-UPDATED 200506220000Z 
+ciscoSipUaCapabilityV12R0402T AGENT-CAPABILITIES
+SUPPORTS CISCO-SIP-UA-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.78 = STRING: Agent capabilities for the CISCO-SNA-LLC-MIB
+ LAST-UPDATED 9505100000Z 
+ciscoSnaLlcCapabilityV11R00 AGENT-CAPABILITIES
+SUPPORTS CISCO-SNA-LLC-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.79 = STRING: Agent capabilities for the SNA-SDLC-MIB
+ LAST-UPDATED 9501230000Z 
+ciscoSnaSdlcCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS SNA-SDLC-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.80 = STRING: Agent capabilities for CISCO-SNAPSHOT-MIB
+ LAST-UPDATED 9501230000Z 
+ciscoSnapshotCapabilityV10R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-SNAPSHOT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.81 = STRING: Agent capabilities for SNMPv2-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoSnmpV2CapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS SNMPv2-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.82 = STRING: Agent capabilities for SNMPv2-PARTY-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoSnmpV2PartyCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS SNMPv2-PARTY-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.83 = STRING: Agent capabilities for SOURCE-ROUTING-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoSourceRoutingCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS SOURCE-ROUTING-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.84 = STRING: Agent capabilities for CISCO-TCP-MIB
+ LAST-UPDATED 9408180000Z 
+ciscoTcpCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS CISCO-TCP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.85 = STRING: Agent capabilities for the CISCO-TCPOFFLOAD-MIB
+ LAST-UPDATED 9706230000Z 
+ciscoTcpOffloadCapabilityV11R02 AGENT-CAPABILITIES
+SUPPORTS CISCO-TCPOFFLOAD-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.86 = STRING: Agent capabilities for 
+                 CISCO-THREAT-MITIGATION-SERVICE-MIB.
+ LAST-UPDATED 200705170000Z 
+ciscoTmsCapIOSV12R05T AGENT-CAPABILITIES
+ SUPPORTS CISCO-THREAT-MITIGATION-SERVICE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.87 = STRING: Agent capabilities for UDP-MIB
+ LAST-UPDATED 9611270000Z 
+ciscoUdpCapabilityV11R02 AGENT-CAPABILITIES
+SUPPORTS UDP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.88 = STRING: Agent capabilities for CISCO-VIDEO-SESSION-MIB.
+ LAST-UPDATED 201105240000Z 
+ciscoVideoSessionCapabilityV15R01 AGENT-CAPABILITIES
+ SUPPORTS CISCO-VIDEO-SESSION-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.89 = STRING: Agent capabilities for CISCO-VOICE-ANALOG-IF-MIB
+
+
+        REVISION    
+ LAST-UPDATED 200304280000Z 
+ciscoVoiceAnalogIfCapabilityV11R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-VOICE-ANALOG-IF-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.90 = STRING: Agent capabilities for CISCO-VOICE-DIAL-CONTROL-MIB.
+ LAST-UPDATED 200903310000Z 
+ciscoVoiceDialControlCapV12R04 AGENT-CAPABILITIES
+ SUPPORTS CISCO-VOICE-DIAL-CONTROL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.91 = STRING: Agent capabilities for CISCO-VOICE-IF-MIB
+ LAST-UPDATED 9706150000Z 
+ciscoVoiceIfCapabilityV11R03 AGENT-CAPABILITIES
+SUPPORTS CISCO-VOICE-IF-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.92 = STRING: 
+ LAST-UPDATED 200603010000Z 
+ciscoXgcpCapabilityV5R300 AGENT-CAPABILITIES
+ SUPPORTS CISCO-XGCP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.93 = STRING: The capabilities description of
+                 CISCO-XGCP-EXT-MIB.
+ LAST-UPDATED 200406180000Z 
+ciscoXgcpExtCapabilityV12R03 AGENT-CAPABILITIES
+ SUPPORTS CISCO-XGCP-EXT-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.94 = STRING: Agent capabilities for MPLS-TE-MIB
+
+
+   -- Revision history.
+
+
+
+   REVISION
+
+          
+ LAST-UPDATED
+mplsTeCapabilityV10R00 AGENT-CAPABILITIES
+SUPPORTS MPLS-TE-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.95 = STRING: Agent capabilities for OLD-CISCO-APPLETALK-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoAppletalkCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-APPLETALK-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.96 = STRING: Agent capabilities for OLD-CISCO-CHASSIS-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoChassisCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-CHASSIS-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.97 = STRING: Agent capabilities for OLD-CISCO-CPU-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoCpuCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-CPU-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.98 = STRING: Agent capabilities for OLD-CISCO-DECNET-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoDECnetCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-DECNET-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.99 = STRING: Agent capabilities for OLD-CISCO-ENV-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoEnvCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-ENV-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.100 = STRING: Agent capabilities for OLD-CISCO-FLASH-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoFlashCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-FLASH-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.101 = STRING: Agent capabilities for OLD-CISCO-INTERFACES-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoIfCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-INTERFACES-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.102 = STRING: Agent capabilities for OLD-CISCO-IP-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoIpCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-IP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.103 = STRING: Agent capabilities for OLD-CISCO-MEMORY-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoMemoryCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-MEMORY-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.104 = STRING: Agent capabilities for OLD-CISCO-NOVELL-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoNovellCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-NOVELL-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.105 = STRING: Agent capabilities for OLD-CISCO-SYSTEM-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoSystemCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-SYSTEM-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.106 = STRING: Agent capabilities for OLD-CISCO-TCP-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoTcpCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-TCP-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORDescr.107 = STRING: Agent capabilities for OLD-CISCO-TS-MIB
+ LAST-UPDATED 9408180000Z 
+oldCiscoTsCapabilityV10R02 AGENT-CAPABILITIES
+SUPPORTS OLD-CISCO-TS-MIB
+File name: sys
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.1 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.2 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.3 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.4 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.5 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.6 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.7 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.8 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.9 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.10 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.11 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.12 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.13 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.14 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.15 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.16 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.17 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.18 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.19 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.20 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.21 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.22 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.23 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.24 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.25 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.26 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.27 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.28 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.29 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.30 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.31 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.32 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.33 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.34 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.35 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.36 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.37 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.38 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.39 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.40 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.41 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.42 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.43 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.44 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.45 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.46 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.47 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.48 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.49 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.50 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.51 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.52 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.53 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.54 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.55 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.56 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.57 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.58 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.59 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.60 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.61 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.62 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.63 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.64 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.65 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.66 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.67 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.68 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.69 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.70 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.71 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.72 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.73 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.74 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.75 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.76 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.77 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.78 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.79 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.80 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.81 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.82 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.83 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.84 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.85 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.86 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.87 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.88 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.89 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.90 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.91 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.92 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.93 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.94 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.95 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.96 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.97 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.98 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.99 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.100 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.101 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.102 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.103 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.104 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.105 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.106 = Timeticks: (0) 0:00:00.00
+.iso.org.dod.internet.mgmt.mib-2.system.sysORTable.sysOREntry.sysORUpTime.107 = Timeticks: (0) 0:00:00.00

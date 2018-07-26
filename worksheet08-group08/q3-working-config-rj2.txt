@@ -1,0 +1,194 @@
+root@lev-rj2> show configuration
+## Last commit: 2018-06-25 05:33:50 UTC by root
+version 12.1X44-D35.5;
+system {
+    host-name lev-rj2;
+    root-authentication {
+        encrypted-password "$1$T44ew529$2GRe8lYo5yKP5Q0aDOXIm/"; ## SECRET-DATA
+    }
+    name-server {
+        208.67.222.222;
+        208.67.220.220;
+    }
+    services {
+        ssh;
+        telnet;
+        xnm-clear-text;
+        web-management {
+            http {
+                interface vlan.0;
+            }
+            https {
+                system-generated-certificate;
+                interface vlan.0;
+            }
+        }
+    }
+    syslog {
+        archive size 100k files 3;
+        user * {
+            any emergency;
+        }
+        file messages {
+            any critical;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands error;
+        }
+    }
+    max-configurations-on-flash 5;
+    max-configuration-rollbacks 5;
+    license {
+        autoupdate {
+            url https://ae1.juniper.net/junos/key_retrieval;
+        }
+    }
+}
+interfaces {
+    ge-0/0/0 {
+        description lev-sj1;
+        unit 0 {
+            family inet {
+                address 10.8.5.2/24;
+            }
+        }
+    }
+    ge-0/0/1 {
+        description lev-rj1;
+        unit 0 {
+            family inet {
+                address 10.8.6.2/24;
+            }
+        }
+    }
+    ge-0/0/2 {
+        description lev-rc1;
+        unit 0 {
+            family inet {
+                address 10.8.7.2/24;
+            }
+        }
+    }
+    ge-0/0/3 {
+        description lev-sc1;
+        disable;
+        unit 0;
+    }
+    ge-0/0/4 {
+        description cologne;
+        disable;
+        unit 0;
+    }
+    ge-0/0/5 {
+        description aachen;
+        disable;
+        unit 0;
+    }
+    ge-0/0/6 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/7 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/8 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/9 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/10 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/11 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/12 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/13 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/14 {
+        disable;
+        unit 0;
+    }
+    ge-0/0/15 {
+        disable;
+        unit 0;
+    }
+    vlan {
+        unit 0 {
+            family inet;
+        }
+    }
+}
+protocols {
+    ospf {
+        area 0.0.0.0 {
+            interface ge-0/0/0.0;
+            interface ge-0/0/1.0;
+            interface ge-0/0/2.0;
+        }
+    }
+    lldp {
+        interface all;
+    }
+    stp;
+}
+security {
+    forwarding-options {
+        family {
+            inet6 {
+                mode flow-based;
+            }
+        }
+    }
+    policies {
+        from-zone anywhere to-zone anywhere {
+            policy trust-everything {
+                match {
+                    source-address any;
+                    destination-address any;
+                    application any;
+                }
+                then {
+                    permit;
+                }
+            }
+        }
+    }
+    zones {
+        security-zone anywhere {
+            host-inbound-traffic {
+                system-services {
+                    ping;
+                    traceroute;
+                }
+                protocols {
+                    all;
+                }
+            }
+            interfaces {
+                all;
+            }
+        }
+    }
+}
+vlans {
+    vlan-trust {
+        vlan-id 3;
+        l3-interface vlan.0;
+    }
+    vlan85 {
+        vlan-id 85;
+    }
+}

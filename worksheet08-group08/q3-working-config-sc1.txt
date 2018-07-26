@@ -1,0 +1,301 @@
+lev-sc1#show running-config 
+Building configuration...
+
+Current configuration : 5095 bytes
+!
+! No configuration change since last restart
+! NVRAM config last updated at 01:29:24 UTC Wed Mar 30 2011
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lev-sc1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$gj.5$LkPNMlLfyimAUGH708zgh/
+!
+no aaa new-model
+switch 1 provision ws-c2960s-24td-l
+!
+!
+no ip domain-lookup
+vtp mode off
+!
+!
+crypto pki trustpoint TP-self-signed-2227354624
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2227354624
+ revocation-check none
+ rsakeypair TP-self-signed-2227354624
+!
+!
+crypto pki certificate chain TP-self-signed-2227354624
+ certificate self-signed 01
+  3082022B 30820194 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 32323237 33353436 3234301E 170D3131 30333330 30313239 
+  32345A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 32323733 
+  35343632 3430819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281 
+  81008E33 CBA40BAC 94FAB7BA B476C26A A6CDC537 BAE8D6ED BC372CED 39E58111 
+  4BD84479 811B00C0 72B2F811 EDC5FD02 44347248 D75A0251 34B9C209 A3904042 
+  9B618235 78096E27 EFCBBD1A B615AA9C AD156E31 B64AFCEC ABE15F82 8D6C03AE 
+  62261436 3D6788FF 9F36EB32 B1E575FD 628F7416 C3AF9991 010572CF 2009421D 
+  0B1D0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 301F0603 
+  551D2304 18301680 14DDAA34 98D89571 0CAD19BB 09330046 3B46BB77 E1301D06 
+  03551D0E 04160414 DDAA3498 D895710C AD19BB09 3300463B 46BB77E1 300D0609 
+  2A864886 F70D0101 05050003 81810046 464E069E 079EA434 AF32FB54 FFF1A4CC 
+  3558F6D9 6B5CD7B4 B7968C65 B1437A9F 732BCE40 7407FBC0 4FF96BF2 DE454E98 
+  116CB3F7 AFCFA154 E87FCC47 81E992B6 148796B7 58E025DE 8E56FF84 46950B65 
+  1A3404C9 214FEF89 595398B6 DFF86B7A 0A2FEA83 73A6C24F F049C280 01B2476F 
+  E386AE7F BDD8271F CA3EF6E3 C0C844
+  	quit
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+!
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+vlan 2 
+!         
+vlan 3
+ name thisIsAweirdName
+!
+vlan 4
+ name thisIsAlsoAWeirdName
+!
+vlan 5,8-14,20-24 
+!
+vlan 32
+ name vlan32
+!
+vlan 41
+ name vlan-lg1
+!
+vlan 42
+ name vlan-lg2
+!
+vlan 43
+ name vlan-lg3
+!
+vlan 44
+ name vlan-lg4
+!         
+vlan 50
+ name orange
+!
+vlan 51
+ name purple5
+!
+vlan 52
+ name green5
+!
+vlan 53
+ name blue
+!
+vlan 54 
+!
+vlan 59
+ name green
+!
+vlan 60-64,70-74,80-85,90-92,100 
+!
+vlan 101
+ name sigbert
+!
+vlan 102  
+ name purple
+!
+vlan 103
+ name h3
+!
+vlan 104
+ name h4
+!
+vlan 111-114 
+!
+vlan 131
+ name as65001
+!
+vlan 132
+ name as65002
+!
+vlan 141-142,300-304,550 
+!
+vlan 551
+ name theriSetup2
+!
+vlan 552
+ name therisSetup
+!
+vlan 553
+ name therisSetup1
+!
+vlan 555
+ name therisSetup2
+!
+vlan 700
+ name ISP-NET
+!
+vlan 701
+ name V4-NET
+!
+vlan 702
+ name lg3-rj1
+!
+vlan 703
+ name rc1-rj1
+!
+vlan 1000-1001,2401-2402,3000 
+!
+lldp run
+!         
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0
+ no ip address
+!
+interface GigabitEthernet1/0/1
+ description lg1
+ switchport access vlan 81
+ switchport mode access
+!
+interface GigabitEthernet1/0/2
+ description lg2
+ switchport access vlan 82
+ switchport mode access
+!
+interface GigabitEthernet1/0/3
+ description lg3
+ switchport trunk allowed vlan 1,50,51,59,112,113
+ switchport mode trunk
+ shutdown
+!
+interface GigabitEthernet1/0/4
+ description lg4
+ switchport access vlan 84
+ switchport mode access
+ shutdown
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/5
+ description lg5
+ shutdown
+!
+interface GigabitEthernet1/0/6
+ description wubalubadubdub
+ shutdown
+!
+interface GigabitEthernet1/0/7
+ shutdown 
+!
+interface GigabitEthernet1/0/8
+ shutdown
+!
+interface GigabitEthernet1/0/9
+ shutdown
+!
+interface GigabitEthernet1/0/10
+ shutdown
+!
+interface GigabitEthernet1/0/11
+ shutdown
+!
+interface GigabitEthernet1/0/12
+ description lev-rc1
+ switchport trunk allowed vlan 21,22,81,82
+ switchport mode trunk
+!
+interface GigabitEthernet1/0/13
+ description lev-sj1
+ switchport trunk allowed vlan 22,23
+ switchport mode trunk
+ shutdown 
+!
+interface GigabitEthernet1/0/14
+ description lev-rj2
+ switchport access vlan 81
+ switchport mode access
+ shutdown
+ spanning-tree bpdufilter enable
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet1/0/15
+ shutdown
+!
+interface GigabitEthernet1/0/16
+ shutdown
+!
+interface GigabitEthernet1/0/17
+ shutdown
+!
+interface GigabitEthernet1/0/18
+ shutdown
+!
+interface GigabitEthernet1/0/19
+ shutdown 
+!
+interface GigabitEthernet1/0/20
+ shutdown
+!
+interface GigabitEthernet1/0/21
+ shutdown
+!
+interface GigabitEthernet1/0/22
+ shutdown
+!
+interface GigabitEthernet1/0/23
+ shutdown
+!
+interface GigabitEthernet1/0/24
+ shutdown
+!
+interface GigabitEthernet1/0/25
+ shutdown
+!
+interface GigabitEthernet1/0/26
+ shutdown
+!
+interface TenGigabitEthernet1/0/1
+ shutdown
+!
+interface TenGigabitEthernet1/0/2
+ shutdown
+!
+interface Vlan1
+ no ip address
+!
+ip http server
+ip http secure-server
+!
+no cdp run
+!
+!
+!
+line con 0
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+end

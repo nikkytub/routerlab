@@ -1,0 +1,137 @@
+Current configuration : 1656 bytes
+!
+! Last configuration change at 14:38:59 UTC Mon Jul 2 2018
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname lev-rc1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$Z0/3$Nr3iizJNGa8AsxSqY6TgS.
+!
+no aaa new-model
+!
+!
+ip cef
+!
+!
+!         
+!
+
+
+!
+!
+!
+!
+no ipv6 cef
+!
+!
+multilink bundle-name authenticated
+license udi pid C892FSP-K9 sn FCZ1917C10D
+!
+!
+!
+!
+!
+!
+!
+lldp run
+! 
+!
+!         
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1
+ description lev-sj1
+ no ip address
+ shutdown
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+!
+interface GigabitEthernet3
+ no ip address
+ shutdown
+!         
+interface GigabitEthernet4
+ no ip address
+ shutdown
+!
+interface GigabitEthernet5
+ no ip address
+ shutdown
+!
+interface GigabitEthernet6
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8
+ description lev-rj2
+ ip address 10.8.5.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9
+ description lev-sc1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet9.80
+ encapsulation dot1Q 80
+ ip address 10.8.0.1 255.255.255.0
+ no cdp enable
+!
+interface GigabitEthernet9.81
+ encapsulation dot1Q 81
+ ip address 10.8.1.1 255.255.255.0
+ no cdp enable
+!
+interface Vlan1
+ no ip address
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+!
+!         
+!
+no cdp run
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ exec-timeout 0 0
+ no modem enable
+line aux 0
+line vty 0 4
+ login
+ transport input all
+line vty 5 15
+ login
+ transport input none
+!
+scheduler allocate 20000 1000
+!
+end

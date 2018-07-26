@@ -1,0 +1,258 @@
+root@lev-sj1> show configuration 
+## Last commit: 2018-06-24 22:56:12 UTC by root
+version 15.1R3.6;
+system {
+    host-name lev-sj1;
+    root-authentication {
+        encrypted-password "$1$oyARqnIO$kGwmmGtJZnmVo20G4Qp8d1"; ## SECRET-DATA
+    }
+    services {
+        dhcp {
+            traceoptions {
+                file dhcp_logfile;
+                level all;
+                flag all;
+            }
+        }
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }                               
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+chassis {
+    auto-image-upgrade;
+}
+interfaces {
+    ge-0/0/0 {
+        description lev-sc1;
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/1 {
+        description lev-rc1;
+        unit 0 {
+            family ethernet-switching {
+                port-mode trunk;
+                vlan {
+                    members [ vlan80 vlan85 ];
+                }
+            }
+        }
+    }
+    ge-0/0/2 {
+        description lev-rj2;
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members vlan85;
+                }
+            }
+        }
+    }
+    ge-0/0/3 {
+        description lev-rj1;
+        unit 0 {
+            family ethernet-switching {
+                port-mode access;
+                vlan {
+                    members vlan80;
+                }                       
+            }
+        }
+    }
+    ge-0/0/4 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/5 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/6 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/7 {
+        disable;                        
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/8 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/9 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/10 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/11 {                         
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/12 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/13 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/14 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }                                   
+    ge-0/0/15 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/16 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/17 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/18 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }                               
+    }
+    ge-0/0/19 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/20 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/21 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/22 {
+        disable;
+        unit 0 {
+            family ethernet-switching;  
+        }
+    }
+    ge-0/0/23 {
+        disable;
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/0/24 {
+        disable;
+    }
+    ge-0/1/0 {
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/1/1 {
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    ge-0/1/2 {
+        unit 0 {                        
+            family ethernet-switching;
+        }
+    }
+    ge-0/1/3 {
+        unit 0 {
+            family ethernet-switching;
+        }
+    }
+    me0 {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-ex2200-24t-4g;
+                }
+            }
+        }
+    }
+    vlan {
+        unit 0 {
+            family inet {
+                dhcp {
+                    vendor-id Juniper-ex2200-24t-4g;
+                }                       
+            }
+        }
+    }
+}
+protocols {
+    rstp;
+    lldp-med {
+        interface all;
+    }
+}
+ethernet-switching-options {
+    storm-control {
+        interface all;
+    }
+}
+vlans {
+    default {
+        l3-interface vlan.0;
+    }
+    vlan80 {
+        vlan-id 80;
+    }
+    vlan85 {                            
+        vlan-id 85;
+    }
+}
