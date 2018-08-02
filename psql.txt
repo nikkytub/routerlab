@@ -1,0 +1,1165 @@
+Last login: Thu Jul  5 11:32:53 on ttys001
+You have mail.
+C02T427GHF1R:netbox d071242$ cd
+C02T427GHF1R:~ d071242$ ls
+Applications	Library		Public		hardcopy.1	screenlog.1
+Desktop		Movies		VirtualBox VMs	hellonode
+Documents	Music		ccloud		nboxdb-dump
+Downloads	Pictures	go		routerslab
+C02T427GHF1R:~ d071242$ cd nboxdb-dump/
+C02T427GHF1R:nboxdb-dump d071242$ ls
+netbox_2018-07-01.Sunday.sql.bz2	netbox_2018-07-03.Tuesday.sql.bz2
+netbox_2018-07-02.Monday.sql.bz2
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ bzip2 -d netbox_2018-07-02.Monday.sql.bz2 |psql nbox
+Password: 
+psql: FATAL:  password authentication failed for user "d071242"
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ bzcat netbox_2018-07-02.Monday.sql | psql nbox
+bzcat: netbox_2018-07-02.Monday.sql is not a bzip2 file.
+Password: 
+psql: fe_sendauth: no password supplied
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ bzcat netbox_2018-07-03.Tuesday.sql.bz2 | psql nbox
+Password: 
+psql: FATAL:  password authentication failed for user "d071242"
+C02T427GHF1R:nboxdb-dump d071242$ ls
+netbox_2018-07-01.Sunday.sql.bz2	netbox_2018-07-03.Tuesday.sql.bz2
+netbox_2018-07-02.Monday.sql
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ ls
+netbox_2018-07-01.Sunday.sql.bz2	netbox_2018-07-03.Tuesday.sql.bz2
+netbox_2018-07-02.Monday.sql
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ psql -u postgresql
+psql: invalid option -- u
+Try "psql --help" for more information.
+C02T427GHF1R:nboxdb-dump d071242$ psql -U postgresql
+Password for user postgresql: 
+C02T427GHF1R:nboxdb-dump d071242$ psql -U postgres
+Password for user postgres: 
+psql: fe_sendauth: no password supplied
+C02T427GHF1R:nboxdb-dump d071242$ netstat -ntlp
+netstat: option requires an argument -- p
+Usage:	netstat [-AaLlnW] [-f address_family | -p protocol]
+	netstat [-gilns] [-f address_family]
+	netstat -i | -I interface [-w wait] [-abdgRtS]
+	netstat -s [-s] [-f address_family | -p protocol] [-w wait]
+	netstat -i | -I interface -s [-f address_family | -p protocol]
+	netstat -m [-m]
+	netstat -r [-Aaln] [-f address_family]
+	netstat -rs [-s]
+
+C02T427GHF1R:nboxdb-dump d071242$ netstat -ntl
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+tcp4       0      0  10.29.12.144.49863     10.21.40.83.443        ESTABLISHED
+tcp4       0      0  10.29.12.144.49862     10.21.40.83.443        ESTABLISHED
+tcp4       0      0  10.29.12.144.49861     172.16.22.26.443       ESTABLISHED
+tcp4       0      0  10.29.12.144.49853     172.16.22.26.443       ESTABLISHED
+tcp4       0      0  10.29.12.144.49848     10.21.40.83.443        ESTABLISHED
+tcp4       0      0  10.29.12.144.49803     10.67.74.97.22         ESTABLISHED
+tcp4       0      0  10.29.12.144.49695     17.252.92.97.5223      ESTABLISHED
+tcp4       0      0  10.29.12.144.49680     10.29.2.117.10005      ESTABLISHED
+tcp4       0      0  10.29.12.144.49672     108.177.119.188.5228   ESTABLISHED
+tcp4       0      0  10.29.12.144.49646     18.197.34.0.443        ESTABLISHED
+tcp4       0      0  10.29.12.144.49645     18.197.34.0.443        ESTABLISHED
+tcp6       0      0  fe80::aede:48ff:fe00:1122%en7.49628           fe80::aede:48ff:fe33:4455%en7.61000           ESTABLISHED
+tcp4       0      0  127.0.0.1.5434         127.0.0.1.49385        FIN_WAIT_2 
+tcp4     117      0  127.0.0.1.49385        127.0.0.1.5434         CLOSE_WAIT 
+tcp4       0      0  10.29.12.144.49237     172.16.22.26.80        CLOSE_WAIT 
+tcp4       0      0  10.29.12.144.49235     155.56.38.205.80       CLOSE_WAIT 
+tcp6       0      0  fe80::aede:48ff:fe00:1122%en7.49170           fe80::aede:48ff:fe33:4455%en7.52032           ESTABLISHED
+udp6       0      0  *.63644                                       *.*                                                      
+udp4       0      0  *.63644                *.*                               
+udp6       0      0  *.52920                                       *.*                                                      
+udp4       0      0  *.52920                *.*                               
+udp6       0      0  *.56210                                       *.*                                                      
+udp4       0      0  *.56210                *.*                               
+udp6       0      0  *.61438                                       *.*                                                      
+udp4       0      0  *.61438                *.*                               
+udp6       0      0  *.57582                                       *.*                                                      
+udp4       0      0  *.57582                *.*                               
+udp6       0      0  *.60397                                       *.*                                                      
+udp4       0      0  *.60397                *.*                               
+udp6       0      0  *.63484                                       *.*                                                      
+udp4       0      0  *.63484                *.*                               
+udp6       0      0  *.54875                                       *.*                                                      
+udp4       0      0  *.54875                *.*                               
+udp6       0      0  *.61157                                       *.*                                                      
+udp4       0      0  *.61157                *.*                               
+udp6       0      0  *.53531                                       *.*                                                      
+udp4       0      0  *.53531                *.*                               
+udp6       0      0  *.56947                                       *.*                                                      
+udp4       0      0  *.56947                *.*                               
+udp6       0      0  *.58286                                       *.*                                                      
+udp4       0      0  *.58286                *.*                               
+udp6       0      0  *.64111                                       *.*                                                      
+udp4       0      0  *.64111                *.*                               
+udp6       0      0  *.54428                                       *.*                                                      
+udp4       0      0  *.54428                *.*                               
+udp6       0      0  *.56610                                       *.*                                                      
+udp4       0      0  *.56610                *.*                               
+udp6       0      0  *.56475                                       *.*                                                      
+udp4       0      0  *.56475                *.*                               
+udp6       0      0  *.56163                                       *.*                                                      
+udp4       0      0  *.56163                *.*                               
+udp6       0      0  *.51932                                       *.*                                                      
+udp4       0      0  *.51932                *.*                               
+udp6       0      0  *.61716                                       *.*                                                      
+udp4       0      0  *.61716                *.*                               
+udp4       0      0  *.49494                *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp6       0      0  *.55340                                       *.*                                                      
+udp4       0      0  *.55340                *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp6       0      0  *.56570                                       *.*                                                      
+udp4       0      0  *.56570                *.*                               
+udp6       0      0  *.63520                                       *.*                                                      
+udp4       0      0  *.63520                *.*                               
+udp6       0      0  *.49385                                       *.*                                                      
+udp4       0      0  *.49385                *.*                               
+udp6       0      0  *.58815                                       *.*                                                      
+udp4       0      0  *.58815                *.*                               
+udp6       0      0  *.65048                                       *.*                                                      
+udp4       0      0  *.65048                *.*                               
+udp6       0      0  *.57981                                       *.*                                                      
+udp4       0      0  *.57981                *.*                               
+udp6       0      0  *.50396                                       *.*                                                      
+udp4       0      0  *.50396                *.*                               
+udp6       0      0  *.60722                                       *.*                                                      
+udp4       0      0  *.60722                *.*                               
+udp6       0      0  *.58894                                       *.*                                                      
+udp4       0      0  *.58894                *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.60705                *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp6       0      0  ::1.52293                                     ::1.52293                                                
+udp6       0      0  ::1.52292                                     ::1.52292                                                
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp46      0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp6       0      0  *.5353                                        *.*                                                      
+udp4       0      0  *.5353                 *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.*                    *.*                               
+udp4       0      0  *.138                  *.*                               
+udp4       0      0  *.137                  *.*                               
+icm4       0      0  *.*                    *.*                               
+Active Multipath Internet connections
+Proto/ID  Flags      Local Address          Foreign Address        (state)    
+icm6       0      0  *.*                                           *.*                                                      
+Active LOCAL (UNIX) domain sockets
+Address          Type   Recv-Q Send-Q            Inode             Conn             Refs          Nextref Addr
+1243c85dca4c5cdf stream      0      0                0 1243c85dca4c5c17                0                0 vms/0/00000003.00000948
+1243c85dca4c5c17 stream      0      0                0 1243c85dca4c5cdf                0                0
+1243c85dc091e18f stream      0      0                0 1243c85dc091ff3f                0                0
+1243c85dc091ff3f stream      0      0                0 1243c85dc091e18f                0                0
+1243c85dcc7b282f stream      0      0                0 1243c85dcc7b5647                0                0
+1243c85dcc7b5647 stream      0      0                0 1243c85dcc7b282f                0                0
+1243c85dcd8573ef stream      0      0                0 1243c85dcd857327                0                0 /var/run/mDNSResponder
+1243c85dcd857327 stream      0      0                0 1243c85dcd8573ef                0                0
+1243c85dcd854c17 stream      0      0                0 1243c85dcd854b4f                0                0
+1243c85dcd854b4f stream      0      0                0 1243c85dcd854c17                0                0
+1243c85dcd854cdf stream      0      0                0 1243c85dcd85725f                0                0
+1243c85dcd85725f stream      0      0                0 1243c85dcd854cdf                0                0
+1243c85dcd854da7 stream      0      0 1243c85dbe9f86e7                0                0                0 /var/folders/d6/sc_c4p890s999t0p91wqzk_40000gn/T/atom-1.22.1-d071242.sock
+1243c85dcd854e6f stream      0      0                0 1243c85dcd857197                0                0
+1243c85dcd857197 stream      0      0                0 1243c85dcd854e6f                0                0
+1243c85dcd857007 stream      0      0                0 1243c85dcd8570cf                0                0 /var/run/mDNSResponder
+1243c85dcd8570cf stream      0      0                0 1243c85dcd857007                0                0
+1243c85dcd855a27 stream      0      0                0 1243c85dcd856e77                0                0 /var/run/mDNSResponder
+1243c85dcd856e77 stream      0      0                0 1243c85dcd855a27                0                0
+1243c85dcd856c1f stream      0      0                0 1243c85dcd854fff                0                0 /var/run/mDNSResponder
+1243c85dcd854fff stream      0      0                0 1243c85dcd856c1f                0                0
+1243c85dcd855257 stream      0      0                0 1243c85dcd856daf                0                0 /var/run/mDNSResponder
+1243c85dcd856daf stream      0      0                0 1243c85dcd855257                0                0
+1243c85dcd8569c7 stream      0      0                0 1243c85dcd855f9f                0                0 /var/run/mDNSResponder
+1243c85dcd855f9f stream      0      0                0 1243c85dcd8569c7                0                0
+1243c85dcd854f37 stream      0      0                0 1243c85dcd85518f                0                0 /var/run/mDNSResponder
+1243c85dcd85518f stream      0      0                0 1243c85dcd854f37                0                0
+1243c85dcd856ce7 stream      0      0                0 1243c85dcd856f3f                0                0
+1243c85dcd856f3f stream      0      0                0 1243c85dcd856ce7                0                0
+1243c85dcd8557cf stream      0      0                0 1243c85dcd8550c7                0                0
+1243c85dcd8550c7 stream      0      0                0 1243c85dcd8557cf                0                0
+1243c85dcd85612f stream      0      0                0 1243c85dcd855577                0                0
+1243c85dcd855577 stream      0      0                0 1243c85dcd85612f                0                0
+1243c85dcd856a8f stream      0      0                0 1243c85dcd855897                0                0
+1243c85dcd855897 stream      0      0                0 1243c85dcd856a8f                0                0
+1243c85dcd855bb7 stream      0      0                0 1243c85dcd8566a7                0                0
+1243c85dcd8566a7 stream      0      0                0 1243c85dcd855bb7                0                0
+1243c85dcd85595f stream      0      0                0 1243c85dcd85563f                0                0 /var/run/mDNSResponder
+1243c85dcd85563f stream      0      0                0 1243c85dcd85595f                0                0
+1243c85dcd855e0f stream      0      0                0                0                0                0
+1243c85dcd855ed7 stream      0      0                0                0                0                0
+1243c85dcd8565df stream      0      0                0 1243c85dcd856387                0                0 /var/run/mDNSResponder
+1243c85dcd856387 stream      0      0                0 1243c85dcd8565df                0                0
+1243c85dcd855c7f stream      0      0                0 1243c85dcd8561f7                0                0 /var/run/mDNSResponder
+1243c85dcd8561f7 stream      0      0                0 1243c85dcd855c7f                0                0
+1243c85dcd855707 stream      0      0                0 1243c85dcd855d47                0                0 /var/run/mDNSResponder
+1243c85dcd855d47 stream      0      0                0 1243c85dcd855707                0                0
+1243c85dcd85531f stream      0      0                0 1243c85dcd856837                0                0 /var/run/mDNSResponder
+1243c85dcd856837 stream      0      0                0 1243c85dcd85531f                0                0
+1243c85dcd856517 stream      0      0                0 1243c85dcd85676f                0                0 /var/run/mDNSResponder
+1243c85dcd85676f stream      0      0                0 1243c85dcd856517                0                0
+1243c85dcd8554af stream      0      0                0 1243c85dcd8568ff                0                0 /var/run/mDNSResponder
+1243c85dcd8568ff stream      0      0                0 1243c85dcd8554af                0                0
+1243c85dcc7b2a87 stream      0      0                0 1243c85dcc7b557f                0                0
+1243c85dcc7b557f stream      0      0                0 1243c85dcc7b2a87                0                0
+1243c85dcc7b46a7 stream      0      0                0 1243c85dcc7b45df                0                0
+1243c85dcc7b45df stream      0      0                0 1243c85dcc7b46a7                0                0
+1243c85dc091f76f stream      0      0                0 1243c85dc3e32a87                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.virusscan.OAS
+1243c85dc3e32cdf stream      0      0                0 1243c85dc3e35327                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.virusscan.OAS
+1243c85dc3e32a87 stream      0      0                0 1243c85dc091f76f                0                0
+1243c85dc3e35327 stream      0      0                0 1243c85dc3e32cdf                0                0
+1243c85dcc7b54b7 stream      0      0                0 1243c85dcc7b29bf                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dcc7b29bf stream      0      0                0 1243c85dcc7b54b7                0                0
+1243c85dcc7b318f stream      0      0                0 1243c85dcc7b3257                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dcc7b3257 stream      0      0                0 1243c85dcc7b318f                0                0
+1243c85dcc7b4f3f stream      0      0                0 1243c85dcc7b4e77                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.virusscan.OAS
+1243c85dcc7b4e77 stream      0      0                0 1243c85dcc7b4f3f                0                0
+1243c85dcc7b28f7 stream      0      0                0 1243c85dcc7b2e6f                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dcc7b2e6f stream      0      0                0 1243c85dcc7b28f7                0                0
+1243c85dc6dc44b7 stream      0      0 1243c85dc1b547df                0                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.virusscan.OAS
+1243c85dcc7b50cf stream      0      0                0 1243c85dcc7b2f37                0                0
+1243c85dcc7b2f37 stream      0      0                0 1243c85dcc7b50cf                0                0
+1243c85dcc7b363f stream      0      0                0 1243c85dcc7b4ce7                0                0
+1243c85dcc7b4ce7 stream      0      0                0 1243c85dcc7b363f                0                0
+1243c85dcc7b2b4f stream      0      0                0 1243c85dcc7b2c17                0                0 /var/run/mDNSResponder
+1243c85dcc7b2c17 stream      0      0                0 1243c85dcc7b2b4f                0                0
+1243c85dcc7b2cdf stream      0      0                0 1243c85dcc7b5327                0                0
+1243c85dcc7b5327 stream      0      0                0 1243c85dcc7b2cdf                0                0
+1243c85dcc7b2da7 stream      0      0                0 1243c85dcc7b525f                0                0
+1243c85dcc7b525f stream      0      0                0 1243c85dcc7b2da7                0                0
+1243c85dcc7b5007 stream      0      0                0 1243c85dcc7b2fff                0                0
+1243c85dcc7b2fff stream      0      0                0 1243c85dcc7b5007                0                0
+1243c85dcc7b4daf stream      0      0                0 1243c85dcc7b30c7                0                0
+1243c85dcc7b30c7 stream      0      0                0 1243c85dcc7b4daf                0                0
+1243c85dcc7b331f stream      0      0                0 1243c85dcc7b33e7                0                0
+1243c85dcc7b33e7 stream      0      0                0 1243c85dcc7b331f                0                0
+1243c85dcc7b34af stream      0      0                0 1243c85dcc7b3577                0                0
+1243c85dcc7b3577 stream      0      0                0 1243c85dcc7b34af                0                0
+1243c85dcc7b3707 stream      0      0                0 1243c85dcc7b4c1f                0                0
+1243c85dcc7b4c1f stream      0      0                0 1243c85dcc7b3707                0                0
+1243c85dcc7b4a8f stream      0      0                0 1243c85dcc7b49c7                0                0
+1243c85dcc7b49c7 stream      0      0                0 1243c85dcc7b4a8f                0                0
+1243c85dcc7b48ff stream      0      0                0 1243c85dcc7b3897                0                0
+1243c85dcc7b3897 stream      0      0                0 1243c85dcc7b48ff                0                0
+1243c85dcc7b4837 stream      0      0                0 1243c85dcc7b476f                0                0
+1243c85dcc7b476f stream      0      0                0 1243c85dcc7b4837                0                0
+1243c85dcc7b395f stream      0      0                0 1243c85dcc7b3a27                0                0
+1243c85dcc7b3a27 stream      0      0                0 1243c85dcc7b395f                0                0
+1243c85dcc7b3aef stream      0      0                0 1243c85dcc7b4517                0                0
+1243c85dcc7b4517 stream      0      0                0 1243c85dcc7b3aef                0                0
+1243c85dcc7b444f stream      0      0                0 1243c85dcc7b3bb7                0                0
+1243c85dcc7b3bb7 stream      0      0                0 1243c85dcc7b444f                0                0
+1243c85dcc7b4387 stream      0      0                0 1243c85dcc7b42bf                0                0
+1243c85dcc7b42bf stream      0      0                0 1243c85dcc7b4387                0                0
+1243c85dcc7b41f7 stream      0      0                0 1243c85dcc7b412f                0                0
+1243c85dcc7b412f stream      0      0                0 1243c85dcc7b41f7                0                0
+1243c85dcc7b3c7f stream      0      0                0 1243c85dcc7b4067                0                0
+1243c85dcc7b4067 stream      0      0                0 1243c85dcc7b3c7f                0                0
+1243c85dcc7b3d47 stream      0      0                0 1243c85dcc7b3e0f                0                0
+1243c85dcc7b3e0f stream      0      0                0 1243c85dcc7b3d47                0                0
+1243c85dcc7b3ed7 stream      0      0                0 1243c85dcc7b3f9f                0                0
+1243c85dcc7b3f9f stream      0      0                0 1243c85dcc7b3ed7                0                0
+1243c85dca4c825f stream      0      0                0 1243c85dca4c83ef                0                0
+1243c85dca4c83ef stream      0      0                0 1243c85dca4c825f                0                0
+1243c85dca4c582f stream      0      0                0 1243c85dca4c5767                0                0
+1243c85dca4c5767 stream      0      0                0 1243c85dca4c582f                0                0
+1243c85dc3e32e6f stream      0      0                0 1243c85dc3e328f7                0                0
+1243c85dc3e328f7 stream      0      0                0 1243c85dc3e32e6f                0                0
+1243c85dc3e32da7 stream      0      0                0 1243c85dc6dc39c7                0                0
+1243c85dc6dc39c7 stream      0      0                0 1243c85dc3e32da7                0                0
+1243c85dbd9b7b4f stream      0      0                0 1243c85dc091dc17                0                0
+1243c85dc091dc17 stream      0      0                0 1243c85dbd9b7b4f                0                0
+1243c85dbd9b9daf stream      0      0                0 1243c85dbd9b9b57                0                0
+1243c85dbd9b9b57 stream      0      0                0 1243c85dbd9b9daf                0                0
+1243c85dca4c63e7 stream      0      0                0 1243c85dca4c5b4f                0                0
+1243c85dca4c5b4f stream      0      0                0 1243c85dca4c63e7                0                0
+1243c85dca4c58f7 stream      0      0                0 1243c85dca4c8647                0                0
+1243c85dca4c8647 stream      0      0                0 1243c85dca4c58f7                0                0
+1243c85dc3e353ef stream      0      0                0 1243c85dca4c857f                0                0
+1243c85dca4c857f stream      0      0                0 1243c85dc3e353ef                0                0
+1243c85dca4c7387 stream      0      0                0 1243c85dca4c744f                0                0
+1243c85dca4c744f stream      0      0                0 1243c85dca4c7387                0                0
+1243c85dca4c59bf stream      0      0                0 1243c85dca4c84b7                0                0
+1243c85dca4c84b7 stream      0      0                0 1243c85dca4c59bf                0                0
+1243c85dca4c80cf stream      0      0                0 1243c85dca4c5fff                0                0
+1243c85dca4c5fff stream      0      0                0 1243c85dca4c80cf                0                0
+1243c85dca4c631f stream      0      0                0 1243c85dca4c7ce7                0                0 /var/run/mDNSResponder
+1243c85dca4c7ce7 stream      0      0                0 1243c85dca4c631f                0                0
+1243c85dca4c6257 stream      0      0                0 1243c85dca4c7daf                0                0
+1243c85dca4c7daf stream      0      0                0 1243c85dca4c6257                0                0
+1243c85dca4c618f stream      0      0                0 1243c85dca4c6bb7                0                0
+1243c85dca4c6bb7 stream      0      0                0 1243c85dca4c618f                0                0
+1243c85dca4c5da7 stream      0      0                0 1243c85dca4c8327                0                0 /var/run/mDNSResponder
+1243c85dca4c8327 stream      0      0                0 1243c85dca4c5da7                0                0
+1243c85dca4c8007 stream      0      0                0 1243c85dca4c7e77                0                0 /var/run/mDNSResponder
+1243c85dca4c7e77 stream      0      0                0 1243c85dca4c8007                0                0
+1243c85dca4c5e6f stream      0      0                0 1243c85dca4c5f37                0                0
+1243c85dca4c5f37 stream      0      0                0 1243c85dca4c5e6f                0                0
+1243c85dca4c67cf stream      0      0                0 1243c85dca4c78ff                0                0 /var/run/mDNSResponder
+1243c85dca4c78ff stream      0      0                0 1243c85dca4c67cf                0                0
+1243c85dca4c6897 stream      0      0 1243c85dca6568d7                0                0                0 /var/folders/d6/sc_c4p890s999t0p91wqzk_40000gn/T/chrome-EnNd1A/Socket
+1243c85dca4c7837 stream      0      0                0 1243c85dca4c776f                0                0
+1243c85dca4c776f stream      0      0                0 1243c85dca4c7837                0                0
+1243c85dca4c6aef stream      0      0 1243c85dca655e2f                0                0                0 /var/folders/d6/sc_c4p890s999t0p91wqzk_40000gn/T/.com.google.Chrome.msOzUQ/SingletonSocket
+1243c85dca4c6c7f stream      0      0                0 1243c85dca4c76a7                0                0 /var/run/mDNSResponder
+1243c85dca4c76a7 stream      0      0                0 1243c85dca4c6c7f                0                0
+1243c85dca4c75df stream      0      0                0 1243c85dca4c7517                0                0 vms/0/00000003.00000948
+1243c85dca4c7517 stream      0      0                0 1243c85dca4c75df                0                0
+1243c85dca4c6d47 stream      0      0                0 1243c85dca4c6e0f                0                0 s60
+1243c85dca4c6e0f stream      0      0                0 1243c85dca4c6d47                0                0
+1243c85dca4c6ed7 stream      0      0                0 1243c85dca4c72bf                0                0 vms/0/00000002.000005f4
+1243c85dca4c72bf stream      0      0                0 1243c85dca4c6ed7                0                0
+1243c85dca4c6f9f stream      0      0                0 1243c85dca4c71f7                0                0 vms/0/connect
+1243c85dca4c71f7 stream      0      0                0 1243c85dca4c6f9f                0                0
+1243c85dca4c7067 stream      0      0                0 1243c85dca4c712f                0                0 vms/0/00000002.000005f4
+1243c85dca4c712f stream      0      0                0 1243c85dca4c7067                0                0
+1243c85dc091e897 stream      0      0                0 1243c85dc3e354b7                0                0 vms/0/connect
+1243c85dc3e354b7 stream      0      0                0 1243c85dc091e897                0                0
+1243c85dc6dc4197 stream      0      0                0 1243c85dc6dc425f                0                0 vms/0/00000002.000005f4
+1243c85dc6dc425f stream      0      0                0 1243c85dc6dc4197                0                0
+1243c85dc6dc43ef stream      0      0                0 1243c85dc6dc2707                0                0 vms/0/connect
+1243c85dc6dc2707 stream      0      0                0 1243c85dc6dc43ef                0                0
+1243c85dc6dc2257 stream      0      0                0 1243c85dc6dc218f                0                0 vms/0/00000002.000005f4
+1243c85dc6dc218f stream      0      0                0 1243c85dc6dc2257                0                0
+1243c85dc092057f stream      0      0                0 1243c85dc091fe77                0                0 vms/0/connect
+1243c85dc091fe77 stream      0      0                0 1243c85dc092057f                0                0
+1243c85dc091dcdf stream      0      0                0 1243c85dc091fdaf                0                0 vms/0/connect
+1243c85dc091fdaf stream      0      0                0 1243c85dc091dcdf                0                0
+1243c85dc091d767 stream      0      0                0 1243c85dc091dfff                0                0 vms/0/00000002.000005f4
+1243c85dc091dfff stream      0      0                0 1243c85dc091d767                0                0
+1243c85dc3e32767 stream      0      0                0 1243c85dc3e329bf                0                0 s51
+1243c85dc3e329bf stream      0      0                0 1243c85dc3e32767                0                0
+1243c85dc3e3282f stream      0      0                0 1243c85dc3e3557f                0                0 /var/run/mDNSResponder
+1243c85dc3e3557f stream      0      0                0 1243c85dc3e3282f                0                0
+1243c85dc6dc1cdf stream      0      0 1243c85dc758e4f7                0                0                0 vms/0/00000002.00001000
+1243c85dc6dc1da7 stream      0      0 1243c85dc7604287                0                0                0 vms/0/00000003.000005f5
+1243c85dc6dc3ce7 stream      0      0 1243c85dc7604097                0                0                0 vms/0/00000003.00000948
+1243c85dc6dc3c1f stream      0      0 1243c85dc7603f9f                0                0                0 vms/0/connect
+1243c85dc6dc1e6f stream      0      0 1243c85dc1b548d7                0                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.scanfactory
+1243c85dc6dc1f37 stream      0      0                0 1243c85dc6dc1fff                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc6dc1fff stream      0      0                0 1243c85dc6dc1f37                0                0
+1243c85dc6dc20c7 stream      0      0                0 1243c85dc6dc23e7                0                0 s50
+1243c85dc6dc23e7 stream      0      0                0 1243c85dc6dc20c7                0                0
+1243c85dc6dc3b57 stream      0      0 1243c85dc743cc3f                0                0                0 g20
+1243c85dc6dc231f stream      0      0                0 1243c85dc6dc3a8f                0                0 /var/run/mDNSResponder
+1243c85dc6dc3a8f stream      0      0                0 1243c85dc6dc231f                0                0
+1243c85dc6dc27cf stream      0      0                0 1243c85dc6dc38ff                0                0 /var/run/mDNSResponder
+1243c85dc6dc38ff stream      0      0                0 1243c85dc6dc27cf                0                0
+1243c85dc6dc3837 stream      0      0 1243c85dc73026e7                0                0                0 s60
+1243c85dc6dc24af stream      0      0 1243c85dc73023ff                0                0                0 s53
+1243c85dc6dc2577 stream      0      0 1243c85dc73024f7                0                0                0 s52
+1243c85dc6dc376f stream      0      0 1243c85dc73025ef                0                0                0 s51
+1243c85dc6dc263f stream      0      0 1243c85dc72df767                0                0                0 s50
+1243c85dc6dc35df stream      0      0 1243c85dc72df85f                0                0                0 s31
+1243c85dc6dc36a7 stream      0      0 1243c85dc72e1667                0                0                0 vms/0/00000002.000005f4
+1243c85dc6dc3387 stream      0      0                0 1243c85dc6dc32bf                0                0 /var/run/mDNSResponder
+1243c85dc6dc32bf stream      0      0                0 1243c85dc6dc3387                0                0
+1243c85dc6dc2bb7 stream      0      0                0 1243c85dc6dc2aef                0                0 /tmp/JQT8RR/s
+1243c85dc6dc2aef stream      0      0                0 1243c85dc6dc2bb7                0                0
+1243c85dc3e32c17 stream      0      0                0 1243c85dc3e32b4f                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc3e32b4f stream      0      0                0 1243c85dc3e32c17                0                0
+1243c85dc3e32f37 stream      0      0                0 1243c85dc3e35197                0                0 /var/run/mDNSResponder
+1243c85dc3e35197 stream      0      0                0 1243c85dc3e32f37                0                0
+1243c85dc3e32fff stream      0      0                0 1243c85dc3e350cf                0                0 /var/run/mDNSResponder
+1243c85dc3e350cf stream      0      0                0 1243c85dc3e32fff                0                0
+1243c85dc3e330c7 stream      0      0                0 1243c85dc3e35007                0                0 /var/run/mDNSResponder
+1243c85dc3e3318f stream      0      0                0 1243c85dc3e33257                0                0 /var/run/mDNSResponder
+1243c85dc3e35007 stream      0      0                0 1243c85dc3e330c7                0                0
+1243c85dc3e33257 stream      0      0                0 1243c85dc3e3318f                0                0
+1243c85dc3e3331f stream      0      0                0 1243c85dc3e333e7                0                0 /var/run/mDNSResponder
+1243c85dc3e333e7 stream      0      0                0 1243c85dc3e3331f                0                0
+1243c85dc3e34f3f stream      0      0                0 1243c85dc3e34e77                0                0 /var/run/mDNSResponder
+1243c85dc3e334af stream      0      0                0 1243c85dc3e33577                0                0 /var/run/mDNSResponder
+1243c85dc3e34e77 stream      0      0                0 1243c85dc3e34f3f                0                0
+1243c85dc3e33577 stream      0      0                0 1243c85dc3e334af                0                0
+1243c85dc3e34daf stream      0      0                0 1243c85dc3e34a8f                0                0 /var/run/mDNSResponder
+1243c85dc3e348ff stream      0      0                0 1243c85dc3e34ce7                0                0 /var/run/mDNSResponder
+1243c85dc3e34a8f stream      0      0                0 1243c85dc3e34daf                0                0
+1243c85dc3e34ce7 stream      0      0                0 1243c85dc3e348ff                0                0
+1243c85dc3e34b57 stream      0      0                0 1243c85dc3e3363f                0                0 /var/run/mDNSResponder
+1243c85dc3e3363f stream      0      0                0 1243c85dc3e34b57                0                0
+1243c85dc3e34c1f stream      0      0                0 1243c85dc3e33707                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc3e33707 stream      0      0                0 1243c85dc3e34c1f                0                0
+1243c85dc3e337cf stream      0      0                0 1243c85dc3e33897                0                0 /var/run/mDNSResponder
+1243c85dc3e33897 stream      0      0                0 1243c85dc3e337cf                0                0
+1243c85dc3e3395f stream      0      0                0 1243c85dc3e3476f                0                0 /var/run/mDNSResponder
+1243c85dc3e3476f stream      0      0                0 1243c85dc3e3395f                0                0
+1243c85dc3e346a7 stream      0      0                0 1243c85dc3e345df                0                0 /var/run/usbmuxd
+1243c85dc3e345df stream      0      0                0 1243c85dc3e346a7                0                0
+1243c85dc3e33aef stream      0      0                0 1243c85dc3e33bb7                0                0
+1243c85dc3e33bb7 stream      0      0                0 1243c85dc3e33aef                0                0
+1243c85dc3e34517 stream      0      0                0 1243c85dc3e33c7f                0                0
+1243c85dc3e33c7f stream      0      0                0 1243c85dc3e34517                0                0
+1243c85dc3e33d47 stream      0      0                0 1243c85dc3e3444f                0                0
+1243c85dc3e3444f stream      0      0                0 1243c85dc3e33d47                0                0
+1243c85dc3e33e0f stream      0      0                0 1243c85dc3e34387                0                0
+1243c85dc3e34387 stream      0      0                0 1243c85dc3e33e0f                0                0
+1243c85dc3e33ed7 stream      0      0                0 1243c85dc3e33f9f                0                0 /var/run/usbmuxd
+1243c85dc3e33f9f stream      0      0                0 1243c85dc3e33ed7                0                0
+1243c85dc3e3412f stream      0      0                0 1243c85dc3e34067                0                0 /var/run/mDNSResponder
+1243c85dc3e34067 stream      0      0                0 1243c85dc3e3412f                0                0
+1243c85dbd9ba4b7 stream      0      0                0 1243c85dbd9b7f37                0                0 /var/run/mDNSResponder
+1243c85dbd9b7f37 stream      0      0                0 1243c85dbd9ba4b7                0                0
+1243c85dbd9b7fff stream      0      0                0 1243c85dc0920647                0                0 /var/run/mDNSResponder
+1243c85dc0920647 stream      0      0                0 1243c85dbd9b7fff                0                0
+1243c85dc09203ef stream      0      0                0 1243c85dc0920327                0                0 /var/run/mDNSResponder
+1243c85dc0920327 stream      0      0                0 1243c85dc09203ef                0                0
+1243c85dc091da87 stream      0      0 1243c85dc3171477                0                0                0 /private/tmp/com.apple.launchd.NVjmTPG0qc/org.macosforge.xquartz:0
+1243c85dc09200cf stream      0      0 1243c85dc317118f                0                0                0 /var/tmp/filesystemui.socket
+1243c85dc091dda7 stream      0      0 1243c85dc3171097                0                0                0 /private/tmp/com.apple.launchd.QPQc34iKsU/Render
+1243c85dc091df37 stream      0      0 1243c85dc2cda287                0                0                0 /private/tmp/com.apple.launchd.e9CEgIoNMa/Listeners
+1243c85dc091e0c7 stream      0      0 1243c85dc2ad5b47                0                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.avnotification
+1243c85dc091e257 stream      0      0                0 1243c85dc0920007                0                0 /var/run/mDNSResponder
+1243c85dc0920007 stream      0      0                0 1243c85dc091e257                0                0
+1243c85dc091e4af stream      0      0                0 1243c85dc091fce7                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc091fce7 stream      0      0                0 1243c85dc091e4af                0                0
+1243c85dc091e577 stream      0      0                0 1243c85dc091e63f                0                0 /var/McAfee/agent/tmp/pipe7884334631016226922
+1243c85dc091e63f stream      0      0                0 1243c85dc091e577                0                0
+1243c85dc091e95f stream      0      0                0 1243c85dc091f6a7                0                0 /var/McAfee/agent/tmp/pipe7884334631016226922
+1243c85dc091f6a7 stream      0      0                0 1243c85dc091e95f                0                0
+1243c85dc091fc1f stream      0      0                0 1243c85dc091e707                0                0 /var/McAfee/agent/tmp/pipe7884334631016226922
+1243c85dc091e707 stream      0      0                0 1243c85dc091fc1f                0                0
+1243c85dc091fa8f stream      0      0                0 1243c85dc091ea27                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc091ea27 stream      0      0                0 1243c85dc091fa8f                0                0
+1243c85dc091fb57 stream      0      0                0 1243c85dc091f9c7                0                0 /var/run/mDNSResponder
+1243c85dc091f9c7 stream      0      0                0 1243c85dc091fb57                0                0
+1243c85dc091f44f stream      0      0                0 1243c85dc091f387                0                0 /var/tmp/.msgbus/ma_5bd9fa52-9d71-e8fd-20b0-306ab91d3db1_65.0x7f9af0e01d20_992875491
+1243c85dc091f387 stream      0      0                0 1243c85dc091f44f                0                0
+1243c85dc091ebb7 stream      0      0                0 1243c85dc091f12f                0                0 /var/tmp/.msgbus/ma_5bd9fa52-9d71-e8fd-20b0-306ab91d3db1_65.0x7f9af0e01d20_992875491
+1243c85dc091f12f stream      0      0                0 1243c85dc091ebb7                0                0
+1243c85dc091f2bf stream      0      0                0 1243c85dc091ee0f                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dc091ee0f stream      0      0                0 1243c85dc091f2bf                0                0
+1243c85dc091ec7f stream      0      0 1243c85dc0bc5b47                0                0                0 /var/tmp/.msgbus/ma_5bd9fa52-9d71-e8fd-20b0-306ab91d3db1_65.0x7f9af0e01d20_992875491
+1243c85dc091eed7 stream      0      0 1243c85dc09ca307                0                0                0 /var/McAfee/agent/tmp/pipe7884334631016226922
+1243c85dc091ef9f stream      0      0                0 1243c85dbd9ba647                0                0 /var/run/mDNSResponder
+1243c85dbd9ba647 stream      0      0                0 1243c85dc091ef9f                0                0
+1243c85dbd9b7767 stream      0      0 1243c85dc0903a4f                0                0                0 /var/tmp/.msgbus/ma_5bd9fa52-9d71-e8fd-20b0-306ab91d3db1_64.0x7fdb2d50b7a0_903092288
+1243c85dbd9b782f stream      0      0                0 1243c85dbd9b78f7                0                0
+1243c85dbd9b78f7 stream      0      0                0 1243c85dbd9b782f                0                0
+1243c85dbd9ba3ef stream      0      0 1243c85dc0375f27                0                0                0 /tmp/JQT8RR/s
+1243c85dbd9ba327 stream      0      0 1243c85dc026a957                0                0                0 /usr/local/McAfee/fmp/var/fmpdsocket
+1243c85dbd9b79bf stream      0      0                0 1243c85dbd9ba25f                0                0
+1243c85dbd9ba25f stream      0      0                0 1243c85dbd9b79bf                0                0
+1243c85dbd9ba197 stream      0      0                0 1243c85dbd9ba0cf                0                0 /var/run/mDNSResponder
+1243c85dbd9ba0cf stream      0      0                0 1243c85dbd9ba197                0                0
+1243c85dbd9b7a87 stream      0      0                0 1243c85dbd9ba007                0                0 /var/run/mDNSResponder
+1243c85dbd9ba007 stream      0      0                0 1243c85dbd9b7a87                0                0
+1243c85dbd9b9f3f stream      0      0 1243c85dbfde985f                0                0                0 /tmp/.s.PGSQL.5433
+1243c85dbd9b9e77 stream      0      0 1243c85dbfde9957                0                0                0 /tmp/.s.PGSQL.5432
+1243c85dbd9b7da7 stream      0      0 1243c85dbf89f8d7                0                0                0 /var/run/displaypolicyd/state
+1243c85dbd9b80c7 stream      0      0                0 1243c85dbd9b99c7                0                0
+1243c85dbd9b99c7 stream      0      0                0 1243c85dbd9b80c7                0                0
+1243c85dbd9b95df stream      0      0 1243c85dbe667667                0                0                0 /var/run/pppconfd
+1243c85dbd9b9387 stream      0      0 1243c85dbdbd6f9f                0                0                0 /usr/local/McAfee/AntiMalware/var/tmp/.com.mcafee.virusscan.eupdateservice
+1243c85dbd9b92bf stream      0      0 1243c85dbdba037f                0                0                0 /var/tmp/com.docker.vmnetd.socket
+1243c85dbd9b8577 stream      0      0 1243c85dbdb9f4f7                0                0                0 /var/rpc/ncalrpc/srvsvc
+1243c85dbd9b863f stream      0      0 1243c85dbdb9f3ff                0                0                0 /var/rpc/ncacn_np/srvsvc
+1243c85dbd9b91f7 stream      0      0 1243c85dbdb95e2f                0                0                0 /var/run/usbmuxd
+1243c85dbd9b912f stream      0      0 1243c85dbdb968d7                0                0                0 /var/rpc/ncalrpc/wkssvc
+1243c85dbd9b8707 stream      0      0 1243c85dbdb967df                0                0                0 /var/rpc/ncacn_np/wkssvc
+1243c85dbd9b87cf stream      0      0 1243c85dbdb963ff                0                0                0 /var/rpc/ncacn_np/mdssvc
+1243c85dbd9b9067 stream      0      0 1243c85dbdb7b667                0                0                0 /var/rpc/ncalrpc/lsarpc
+1243c85dbd9b8897 stream      0      0 1243c85dbdb7b56f                0                0                0 /var/rpc/ncacn_np/lsarpc
+1243c85dbd9b8f9f stream      0      0 1243c85dbdb536e7                0                0                0 /var/run/mDNSResponder
+1243c85dbd9b8ed7 stream      0      0 1243c85dbdb3f667                0                0                0 /var/run/systemkeychaincheck.socket
+1243c85dbd9b8e0f stream      0      0 1243c85dbdb3e6e7                0                0                0 /private/var/run/.sim_diagnosticd_socket
+1243c85dbd9b8d47 stream      0      0 1243c85dbdb39a4f                0                0                0 /var/run/portmap.socket
+1243c85dbd9b8c7f stream      0      0 1243c85dbdb3acb7                0                0                0 /var/run/vpncontrol.sock
+1243c85dbd9b895f stream      0      0 1243c85dbdb256e7                0                0                0 /var/rpc/ncalrpc/NETLOGON
+1243c85dbd9b8a27 stream      0      0 1243c85dbdb0185f                0                0                0 /private/var/run/cupsd
+1243c85dcd85644f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dcd856067
+1243c85dcd8553e7 dgram       0      0                0 1243c85dcd856b57 1243c85dcd856b57                0
+1243c85dcd856b57 dgram       0      0                0 1243c85dcd8553e7 1243c85dcd8553e7                0
+1243c85dcd856067 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dca4c7f3f
+1243c85dca4c7f3f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dca4c663f
+1243c85dca4c663f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dca4c695f
+1243c85dca4c6707 dgram       0      0                0 1243c85dca4c79c7 1243c85dca4c79c7                0
+1243c85dca4c79c7 dgram       0      0                0 1243c85dca4c6707 1243c85dca4c6707                0
+1243c85dca4c695f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dca4c6a27
+1243c85dca4c6a27 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc3e3525f
+1243c85dc3e3525f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc3e35647
+1243c85dc3e35647 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc6dc40cf
+1243c85dc6dc40cf dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc6dc4007
+1243c85dc6dc3daf dgram       0      0                0 1243c85dc6dc1c17 1243c85dc6dc1c17                0
+1243c85dc6dc1c17 dgram       0      0                0 1243c85dc6dc3daf 1243c85dc6dc3daf                0
+1243c85dc6dc1b4f dgram       0      0                0 1243c85dc6dc3517 1243c85dc6dc3517                0
+1243c85dc6dc3517 dgram       0      0                0 1243c85dc6dc1b4f 1243c85dc6dc1b4f                0
+1243c85dc6dc4007 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc6dc344f
+1243c85dc6dc3e77 dgram       0      0                0 1243c85dc6dc3f3f 1243c85dc6dc3f3f                0
+1243c85dc6dc3f3f dgram       0      0                0 1243c85dc6dc3e77 1243c85dc6dc3e77                0
+1243c85dc6dc344f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc6dc2897
+1243c85dc6dc2897 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc3e349c7
+1243c85dc6dc31f7 dgram       0      0                0 1243c85dc6dc295f 1243c85dc6dc295f                0
+1243c85dc6dc295f dgram       0      0                0 1243c85dc6dc31f7 1243c85dc6dc31f7                0
+1243c85dc6dc2f9f dgram       0      0                0 1243c85dc6dc2a27 1243c85dc6dc2a27                0
+1243c85dc6dc2a27 dgram       0      0                0 1243c85dc6dc2f9f 1243c85dc6dc2f9f                0
+1243c85dc6dc2d47 dgram       0      0                0 1243c85dc6dc2ed7 1243c85dc6dc2ed7                0
+1243c85dc6dc2ed7 dgram       0      0                0 1243c85dc6dc2d47 1243c85dc6dc2d47                0
+1243c85dc6dc2c7f dgram       0      0                0 1243c85dc6dc2e0f 1243c85dc6dc2e0f                0
+1243c85dc6dc2e0f dgram       0      0                0 1243c85dc6dc2c7f 1243c85dc6dc2c7f                0
+1243c85dc3e349c7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc3e34837
+1243c85dc3e34837 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc3e33a27
+1243c85dc3e33a27 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091d8f7
+1243c85dc3e341f7 dgram       0      0                0 1243c85dc3e342bf 1243c85dc3e342bf                0
+1243c85dc3e342bf dgram       0      0                0 1243c85dc3e341f7 1243c85dc3e341f7                0
+1243c85dc091d8f7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091d82f
+1243c85dc091d82f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc09204b7
+1243c85dc09204b7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091d9bf
+1243c85dc091d9bf dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc092025f
+1243c85dc092025f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc0920197
+1243c85dc0920197 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091db4f
+1243c85dc091db4f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091de6f
+1243c85dc091de6f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091e31f
+1243c85dc091e31f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091e3e7
+1243c85dc091e3e7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091e7cf
+1243c85dc091f837 dgram       0      0                0 1243c85dc091f8ff 1243c85dc091f8ff                0
+1243c85dc091f8ff dgram       0      0                0 1243c85dc091f837 1243c85dc091f837                0
+1243c85dc091e7cf dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091f517
+1243c85dc091eaef dgram       0      0                0 1243c85dc091f5df 1243c85dc091f5df                0
+1243c85dc091f5df dgram       0      0                0 1243c85dc091eaef 1243c85dc091eaef                0
+1243c85dc091f517 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dc091f1f7
+1243c85dc091f1f7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9ba57f
+1243c85dc091f067 dgram       0      0                0 1243c85dc091ed47 1243c85dc091ed47                0
+1243c85dc091ed47 dgram       0      0                0 1243c85dc091f067 1243c85dc091f067                0
+1243c85dbd9ba57f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b9c1f
+1243c85dbd9b9ce7 dgram       0      0                0 1243c85dbd9b7c17 1243c85dbd9b7c17                0
+1243c85dbd9b7c17 dgram       0      0                0 1243c85dbd9b9ce7 1243c85dbd9b9ce7                0
+1243c85dbd9b9c1f dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b7cdf
+1243c85dbd9b7cdf dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b9837
+1243c85dbd9b7e6f dgram       0      0                0 1243c85dbd9b9a8f 1243c85dbd9b9a8f                0
+1243c85dbd9b9a8f dgram       0      0                0 1243c85dbd9b7e6f 1243c85dbd9b7e6f                0
+1243c85dbd9b8257 dgram       0      0                0 1243c85dbd9b831f 1243c85dbd9b831f                0
+1243c85dbd9b831f dgram       0      0                0 1243c85dbd9b8257 1243c85dbd9b8257                0
+1243c85dbd9b818f dgram       0      0                0 1243c85dbd9b98ff 1243c85dbd9b98ff                0
+1243c85dbd9b98ff dgram       0      0                0 1243c85dbd9b818f 1243c85dbd9b818f                0
+1243c85dbd9b9837 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b9517
+1243c85dbd9b976f dgram       0      0                0 1243c85dbd9b96a7 1243c85dbd9b96a7                0
+1243c85dbd9b96a7 dgram       0      0                0 1243c85dbd9b976f 1243c85dbd9b976f                0
+1243c85dbd9b9517 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b83e7
+1243c85dbd9b83e7 dgram       0      0                0 1243c85dbd9b8bb7                0 1243c85dbd9b8aef
+1243c85dbd9b84af dgram       0      0                0 1243c85dbd9b944f 1243c85dbd9b944f                0
+1243c85dbd9b944f dgram       0      0                0 1243c85dbd9b84af 1243c85dbd9b84af                0
+1243c85dbd9b8aef dgram       0      0                0 1243c85dbd9b8bb7                0                0
+1243c85dbd9b8bb7 dgram       0      0 1243c85dbd9adea7                0 1243c85dcd85644f                0 /private//var/run/syslog
+Registered kernel control modules
+id       flags    pcbcount rcvbuf   sndbuf   name 
+       1        9        0   131072   131072 com.apple.flow-divert 
+       2        1        1    16384     2048 com.apple.nke.sockwall 
+       3        9        0   524288   524288 com.apple.content-filter 
+       4        9        0     8192     2048 com.apple.packet-mangler 
+       5        1        0    65536    65536 com.apple.net.necp_control 
+       6        1       16    65536    65536 com.apple.net.netagent 
+       7        9        1   524288   524288 com.apple.net.utun_control 
+       8        1        0    65536    65536 com.apple.net.ipsec_control 
+       9        0       28     8192     2048 com.apple.netsrc 
+       a       18        4     8192     2048 com.apple.network.statistics 
+       b        5        0     8192     2048 com.apple.network.tcp_ccdebug 
+       c        1        0     8192     2048 com.apple.network.advisory 
+       d        4        0    65536     2048 com.apple.uart.MALS 
+       e        4        0     8192     2048 com.apple.uart.sk.MALS 
+       f        4        0    65536     2048 com.apple.uart.BLTH 
+      10        4        0     8192     2048 com.apple.uart.sk.BLTH 
+      11        4        0    65536     2048 com.apple.uart.SOC 
+      12        4        0     8192     2048 com.apple.uart.sk.SOC 
+      13        1        0   536000   536000 com.intelsecurity.filecore 
+      14        1        1  1088000  1080000 com.McAfee.AVKext 
+      15        1        1     8192    83052 com.mcafee.kext.syscore 
+Active kernel event sockets
+Proto Recv-Q Send-Q vendor  class subcla
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1     11
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1     10
+kevt       0      0      1      1      7
+kevt       0      0      1      1      1
+kevt       0      0   1000      5     11
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1      2
+kevt       0      0      1      1      2
+kevt       0      0      1      3      3
+kevt       0      0      1      6      1
+kevt       0      0      1      1      0
+Active kernel control sockets
+Proto Recv-Q Send-Q   unit     id name
+kctl       0      0      1      2 com.apple.nke.sockwall
+kctl       0      0      1      6 com.apple.net.netagent
+kctl       0      0      2      6 com.apple.net.netagent
+kctl       0      0      3      6 com.apple.net.netagent
+kctl       0      0      4      6 com.apple.net.netagent
+kctl       0      0      5      6 com.apple.net.netagent
+kctl       0      0      6      6 com.apple.net.netagent
+kctl       0      0      7      6 com.apple.net.netagent
+kctl       0      0      8      6 com.apple.net.netagent
+kctl       0      0      9      6 com.apple.net.netagent
+kctl       0      0     10      6 com.apple.net.netagent
+kctl       0      0     11      6 com.apple.net.netagent
+kctl       0      0     12      6 com.apple.net.netagent
+kctl       0      0     13      6 com.apple.net.netagent
+kctl       0      0     14      6 com.apple.net.netagent
+kctl       0      0     15      6 com.apple.net.netagent
+kctl       0      0     16      6 com.apple.net.netagent
+kctl       0      0      1      7 com.apple.net.utun_control
+kctl       0      0      1      9 com.apple.netsrc
+kctl       0      0      2      9 com.apple.netsrc
+kctl       0      0      3      9 com.apple.netsrc
+kctl       0      0      4      9 com.apple.netsrc
+kctl       0      0      5      9 com.apple.netsrc
+kctl       0      0      7      9 com.apple.netsrc
+kctl       0      0      8      9 com.apple.netsrc
+kctl       0      0      9      9 com.apple.netsrc
+kctl       0      0     10      9 com.apple.netsrc
+kctl       0      0     11      9 com.apple.netsrc
+kctl       0      0     12      9 com.apple.netsrc
+kctl       0      0     13      9 com.apple.netsrc
+kctl       0      0     14      9 com.apple.netsrc
+kctl       0      0     15      9 com.apple.netsrc
+kctl       0      0     16      9 com.apple.netsrc
+kctl       0      0     17      9 com.apple.netsrc
+kctl       0      0     18      9 com.apple.netsrc
+kctl       0      0     19      9 com.apple.netsrc
+kctl       0      0     20      9 com.apple.netsrc
+kctl       0      0     21      9 com.apple.netsrc
+kctl       0      0     22      9 com.apple.netsrc
+kctl       0      0     23      9 com.apple.netsrc
+kctl       0      0     24      9 com.apple.netsrc
+kctl       0      0     25      9 com.apple.netsrc
+kctl       0      0     26      9 com.apple.netsrc
+kctl       0      0     27      9 com.apple.netsrc
+kctl       0      0     28      9 com.apple.netsrc
+kctl       0      0     29      9 com.apple.netsrc
+kctl       0      0      1     10 com.apple.network.statistics
+kctl       0      0      2     10 com.apple.network.statistics
+kctl       0      0      3     10 com.apple.network.statistics
+kctl       0      0      4     10 com.apple.network.statistics
+kctl       0      0      1     20 com.McAfee.AVKext
+kctl       0      0      1     21 com.mcafee.kext.syscore
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ ps aux 
+USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+d071242           1130   2.7  8.1  6611296 1359220   ??  S    11:30AM   1:43.79 com.docker.hyperkit -A 
+d071242           1815   1.3  0.6  4407340 104248 s001  S+   11:35AM   3:01.77 /usr/bin/python manage.
+d071242           3473   1.1  1.6  5581532 261540   ??  S     1:31PM   0:10.70 /private/var/folders/d6
+d071242           3468   1.0  1.8  6321092 309316   ??  S     1:31PM   0:09.13 /private/var/folders/d6
+d071242           2630   0.4  2.8  7276708 464412   ??  S    12:57PM   0:34.36 /Applications/Microsoft
+d071242           3472   0.0  0.1  4306812   8780   ??  S     1:31PM   0:00.02 /var/folders/d6/sc_c4p8
+d071242           3470   0.0  0.5  4710000  76052   ??  S     1:31PM   0:01.83 /private/var/folders/d6
+d071242           3469   0.0  0.1  4332652   8500   ??  S     1:31PM   0:00.06 /usr/libexec/swcd
+d071242           3465   0.0  0.1  4340104  12692   ??  S     1:31PM   0:00.07 /System/Library/Framewo
+d071242           3458   0.0  0.4  4465168  61752   ??  S     1:30PM   0:02.07 /Applications/Postgres.
+d071242           3446   0.0  0.1  4358036  25140   ??  S     1:30PM   0:00.17 /System/Library/Framewo
+d071242           3445   0.0  0.2  4350708  30152   ??  S     1:30PM   0:00.18 /System/Library/Framewo
+d071242           3444   0.0  0.1  4357112  18832   ??  S     1:30PM   0:00.14 /System/Library/Framewo
+root              3179   0.0  0.1  4332956   9800   ??  Ss    1:29PM   0:00.10 /usr/sbin/cupsd -l
+d071242           2946   0.0  0.0  4296240   1712 s004  S+    1:25PM   0:00.06 -bash
+root              2945   0.0  0.0  4304432   6036 s004  Ss    1:25PM   0:00.03 login -pf d071242
+d071242           2769   0.0  0.0  4280004   4900   ??  S     1:09PM   0:00.04 /usr/bin/ssh-agent -l
+d071242           2768   0.0  0.0  4306444   6952 s003  S+    1:09PM   0:00.12 ssh root@netbox.global.
+d071242           2733   0.0  0.0  4296240   1716 s003  S     1:08PM   0:00.03 -bash
+root              2732   0.0  0.0  4304432   6160 s003  Ss    1:08PM   0:00.02 login -pfl d071242 /bin
+d071242           2672   0.0  0.1  4361384  24828   ??  Ss   12:58PM   0:00.23 /System/Library/Framewo
+d071242           2638   0.0  0.1  4334052  15472   ??  S    12:57PM   0:00.07 /System/Library/Private
+d071242           2637   0.0  0.1  4355788  22084   ??  S    12:57PM   0:00.32 /System/Library/Private
+d071242           2600   0.0  0.2  5109020  36988   ??  S    12:52PM   0:00.14 /Applications/Google Ch
+d071242           2597   0.0  0.6  5334584 107472   ??  S    12:52PM   0:01.88 /Applications/Google Ch
+d071242           2575   0.0  0.1  4357672  23736   ??  Ss   12:51PM   0:00.19 /System/Library/Framewo
+d071242           2572   0.0  0.0  4305748   6844   ??  S    12:50PM   0:00.06 /System/Library/CoreSer
+d071242           2571   0.0  0.0  4305084   6180   ??  S    12:50PM   0:00.02 /System/Library/Framewo
+d071242           2570   0.0  0.8  5169804 139188   ??  S    12:50PM   0:29.45 /Applications/Preview.a
+d071242           2564   0.0  0.1  4333168  12160   ??  Ss   12:50PM   0:00.05 /System/Library/Private
+d071242           2554   0.0  0.6  5249420  95960   ??  S    12:49PM   0:05.23 /Applications/Google Ch
+d071242           2533   0.0  0.0  4305008   5456   ??  S    12:49PM   0:00.02 /System/Library/Private
+d071242           2528   0.0  0.0  4288292   4616   ??  S    12:48PM   0:00.22 /Applications/PyCharm C
+d071242           2521   0.0  4.5  8007176 756492   ??  S    12:48PM   6:41.87 /Applications/PyCharm C
+d071242           2344   0.0  0.1  4355180  16892   ??  S    12:46PM   0:00.26 /System/Library/Prefere
+d071242           2012   0.0  0.1  4304572   9924   ??  S    11:46AM   0:00.05 /System/Library/Framewo
+d071242           2005   0.0  1.1  5342888 182852   ??  S    11:46AM   0:20.03 /Applications/Google Ch
+root              1987   0.0  0.1   824944  23660   ??  S    11:45AM   0:05.76 /usr/local/McAfee/AntiM
+root              1986   0.0  0.2   825360  27340   ??  S    11:45AM   0:05.96 /usr/local/McAfee/AntiM
+root              1985   0.0  0.2   824600  25840   ??  S    11:45AM   0:06.00 /usr/local/McAfee/AntiM
+d071242           1953   0.0  0.1  4336928  21304   ??  S    11:44AM   0:00.27 /System/Library/Private
+d071242           1948   0.0  2.1  5670852 359784   ??  S    11:43AM   1:03.81 /Applications/Slack.app
+d071242           1943   0.0  0.6  5208180  93176   ??  S    11:43AM   0:03.48 /Applications/Slack.app
+d071242           1941   0.0  2.1  5570164 348628   ??  S    11:43AM   0:12.72 /Applications/Slack.app
+d071242           1940   0.0  0.7  5207204 110772   ??  S    11:43AM   0:02.08 /Applications/Slack.app
+d071242           1937   0.0  0.0  4332880   6812   ??  S    11:43AM   0:00.45 /System/Library/Framewo
+d071242           1936   0.0  1.7  4992440 292704   ??  S    11:43AM   0:12.93 /Applications/Slack.app
+d071242           1935   0.0  0.7  5996036 119332   ??  S    11:43AM   0:42.30 /Applications/Slack.app
+d071242           1911   0.0  0.4  5145196  68976   ??  S    11:41AM   0:00.52 /Applications/Google Ch
+d071242           1910   0.0  0.4  5135340  59208   ??  S    11:41AM   0:00.47 /Applications/Google Ch
+d071242           1909   0.0  0.4  5149092  63704   ??  S    11:41AM   0:03.01 /Applications/Google Ch
+d071242           1908   0.0  0.5  5152760  81568   ??  S    11:41AM   0:05.92 /Applications/Google Ch
+d071242           1907   0.0  0.4  5144980  66664   ??  S    11:41AM   0:00.57 /Applications/Google Ch
+d071242           1906   0.0  0.4  5145676  66152   ??  S    11:41AM   0:00.60 /Applications/Google Ch
+d071242           1905   0.0  0.4  5138164  62080   ??  S    11:41AM   0:00.53 /Applications/Google Ch
+d071242           1903   0.0  0.9  5225408 151436   ??  S    11:41AM   0:25.32 /Applications/Google Ch
+d071242           1902   0.0  0.8  5224816 131312   ??  S    11:41AM   0:21.81 /Applications/Google Ch
+d071242           1883   0.0  0.1  4340336  22004   ??  S    11:39AM   0:00.17 /System/Library/Framewo
+d071242           1863   0.0  0.5  5169696  75944   ??  S    11:37AM   0:00.97 /Applications/Google Ch
+d071242           1826   0.0  0.0  4296240   1668 s002  S    11:36AM   0:00.15 -bash
+root              1825   0.0  0.0  4304432   6076 s002  Ss   11:36AM   0:00.03 login -pfl d071242 /bin
+d071242           1820   0.0  0.5  5246604  85516   ??  S    11:35AM   0:00.95 /Applications/Google Ch
+d071242           1809   0.0  0.4  4360800  67180 s001  S+   11:35AM   0:02.45 python manage.py runser
+d071242           1779   0.0  0.4  5167824  70260   ??  S    11:33AM   0:01.65 /Applications/Google Ch
+d071242           1602   0.0  0.0  4296240   1748 s001  S    11:32AM   0:00.06 -bash
+root              1601   0.0  0.0  4304432   5992 s001  Ss   11:32AM   0:00.03 login -pf d071242
+d071242           1600   0.0  0.8  4546004 132548   ??  S    11:32AM   0:30.21 /Applications/Utilities
+postgres          1599   0.0  0.1  4335636  10280   ??  S    11:32AM   0:00.32 /usr/libexec/trustd --a
+postgres          1598   0.0  0.1  4340800  14916   ??  S    11:32AM   0:00.60 /usr/libexec/lsd
+postgres          1597   0.0  0.0  4304900   1488   ??  S    11:32AM   0:00.03 /usr/sbin/cfprefsd agen
+d071242           1591   0.0  0.1  4305552   9292   ??  S    11:32AM   0:00.05 /System/Library/Private
+d071242           1590   0.0  0.1  4304476  22156   ??  S    11:32AM   0:00.06 /System/Library/CoreSer
+d071242           1589   0.0  0.1  4331416  17032   ??  S    11:32AM   0:00.08 /System/Library/Private
+d071242           1544   0.0  0.2  5082256  39984   ??  S    11:31AM   0:00.37 /Applications/Google Ch
+d071242           1539   0.0  0.0  4331900   7716   ??  Ss   11:31AM   0:00.05 /System/Library/Framewo
+d071242           1536   0.0  0.1  4304736   8812   ??  Ss   11:31AM   0:00.02 /Applications/Google Ch
+d071242           1535   0.0  0.7  4793224 114348   ??  S    11:31AM   0:15.63 /Applications/Google Ch
+d071242           1532   0.0  0.1  4307236   8912   ??  S    11:31AM   0:00.02 /Applications/Google Ch
+_gamecontrollerd  1530   0.0  0.1  4305584   9276   ??  Ss   11:31AM   0:00.27 /usr/libexec/gamecontro
+d071242           1529   0.0  1.4  4959608 227716   ??  S    11:31AM   1:52.78 /Applications/Google Ch
+root              1330   0.0  0.0  4306752   6200   ??  Ss   11:31AM   0:01.20 /System/Library/Private
+_spotlight        1329   0.0  0.1  4335588  10176   ??  S    11:31AM   0:00.44 /usr/libexec/trustd --a
+d071242           1322   0.0  0.1  4332912  13760   ??  S    11:31AM   0:00.34 /System/Library/Framewo
+_spotlight        1213   0.0  0.0  4305588   2868   ??  S    11:30AM   0:00.05 /usr/sbin/distnoted age
+_captiveagent     1198   0.0  0.0  4306676   7164   ??  Ss   11:30AM   0:00.09 /usr/libexec/captiveage
+d071242           1192   0.0  0.1  4306876  11100   ??  Ss   11:30AM   0:00.07 /Library/Frameworks/iTu
+d071242           1191   0.0  0.1  4353872  19700   ??  S    11:30AM   0:00.31 /System/Library/Private
+d071242           1190   0.0  0.1  4304916  14256   ??  Ss   11:30AM   0:00.05 /System/Library/Private
+d071242           1188   0.0  0.1  4330764  20256   ??  S    11:30AM   0:00.08 /System/Library/Private
+d071242           1187   0.0  0.0  4331424   6956   ??  Ss   11:30AM   0:00.08 /System/Library/SystemC
+d071242           1186   0.0  0.1  4353368  15432   ??  S    11:30AM   0:00.35 /System/Library/CoreSer
+d071242           1185   0.0  0.1  4333980  19792   ??  S    11:30AM   0:00.46 /System/Library/Private
+_assetcache       1181   0.0  0.1  4336156  12876   ??  Ss   11:30AM   0:00.08 /usr/libexec/AssetCache
+root              1180   0.0  0.0  4332652   6716   ??  Ss   11:30AM   0:00.04 /usr/bin/sysdiagnose
+d071242           1177   0.0  0.1  4304704   8436   ??  Ss   11:30AM   0:00.02 /System/Library/Framewo
+d071242           1176   0.0  0.1  4332580   9192   ??  S    11:30AM   0:00.13 /System/Library/Framewo
+root              1175   0.0  0.1  4331088  14088   ??  Ss   11:30AM   0:00.06 /usr/libexec/dmd
+d071242           1173   0.0  0.0  4305596   5576   ??  S    11:30AM   0:00.02 /usr/libexec/spindump_a
+d071242           1167   0.0  0.1  4332388  15528   ??  S    11:30AM   0:00.06 /System/Library/Private
+d071242           1163   0.0  0.1  4305640  11080   ??  S    11:30AM   0:00.04 /System/Library/CoreSer
+_applepay         1162   0.0  0.0  4330832   7228   ??  Ss   11:30AM   0:00.04 /usr/libexec/seld
+d071242           1150   0.0  0.1  4331320  11068   ??  S    11:30AM   0:00.08 /usr/libexec/videosubsc
+d071242           1136   0.0  0.1  4331276   9556   ??  S    11:30AM   0:00.05 /System/Library/CoreSer
+d071242           1134   0.0  0.0  4296896   8256   ??  S    11:30AM   0:00.02 SafeEjectGPUAgent
+d071242           1123   0.0  0.2  4335336  27028   ??  S    11:30AM   0:01.27 /System/Library/CoreSer
+d071242           1122   0.0  0.1  4333652   9452   ??  S    11:30AM   0:00.12 /System/Library/Private
+d071242           1121   0.0  0.1  4341800  16356   ??  S    11:30AM   0:00.09 /System/Library/CoreSer
+d071242           1119   0.0  0.1  4304596   8888   ??  S    11:30AM   0:00.02 /System/Library/Private
+d071242           1118   0.0  0.1  4330808  10136   ??  S    11:30AM   0:00.04 /System/Library/Private
+d071242           1116   0.0  0.1  4331908  13484   ??  S    11:30AM   0:00.14 /usr/libexec/silhouette
+d071242           1115   0.0  0.1  4330600  25068   ??  S    11:30AM   0:00.07 /System/Library/Private
+d071242           1114   0.0  0.2  4410060  35188   ??  S    11:30AM   0:00.57 /System/Library/Private
+d071242           1113   0.0  0.1  4336520  13528   ??  S    11:30AM   0:00.08 /System/Library/Private
+d071242           1111   0.0  0.1  4400952  24272   ??  S    11:30AM   0:00.10 /System/Library/Framewo
+d071242           1109   0.0  0.2  4382084  31344   ??  S    11:30AM   0:00.49 /System/Library/CoreSer
+_applepay         1104   0.0  0.0  4331644   7796   ??  Ss   11:30AM   0:00.12 /usr/libexec/nfcd
+d071242           1103   0.0  0.1  4350332  15648   ??  S    11:30AM   0:00.32 /System/Library/CoreSer
+d071242           1102   0.0  0.0  4304936   5324   ??  S    11:30AM   0:00.02 /System/Library/CoreSer
+d071242           1101   0.0  0.2  4376620  27352   ??  S    11:30AM   0:00.36 /System/Library/Private
+d071242           1100   0.0  0.1  4332972  11768   ??  S    11:30AM   0:00.10 /usr/libexec/networkser
+root              1099   0.0  0.0  4304388   5496   ??  Ss   11:30AM   0:00.02 /System/Library/CoreSer
+d071242           1098   0.0  0.1 558546316  22152   ??  S    11:30AM   0:00.51 com.docker.driver.amd64
+d071242           1097   0.0  0.1  4357724  15644   ??  S    11:30AM   0:00.61 com.docker.vpnkit --eth
+d071242           1096   0.0  0.2  4380188  27316   ??  S    11:30AM   0:00.91 /System/Library/CoreSer
+d071242           1095   0.0  0.1  4311964  10428   ??  S    11:30AM   0:00.06 com.docker.osxfs serve 
+d071242           1092   0.0  0.1 558527900  15472   ??  S    11:30AM   0:00.31 /Applications/Docker.ap
+d071242           1082   0.0  0.0  4305460   5516   ??  S    11:30AM   0:00.02 /usr/libexec/loginitemr
+d071242           1034   0.0  0.1  4353192  19696   ??  Ss   11:30AM   0:00.20 /System/Library/Framewo
+d071242           1030   0.0  0.2  4431928  29220   ??  S    11:30AM   0:01.92 /Applications/Docker.ap
+d071242           1020   0.0  0.2  4408400  26392   ??  S    11:30AM   0:02.84 /Applications/Postgres.
+d071242            979   0.0  0.1  4306396  20080   ??  S    11:30AM   0:00.19 /System/Library/Private
+d071242            975   0.0  0.1  4349984  13860   ??  S    11:30AM   0:00.29 /System/Library/CoreSer
+d071242            962   0.0  0.1  4335148  14144   ??  S    11:30AM   0:00.12 /usr/libexec/keyboardse
+d071242            960   0.0  0.1  4330600   9032   ??  S    11:30AM   0:00.11 /Library/Application Su
+d071242            959   0.0  0.1  4356512  15160   ??  S    11:30AM   0:00.31 /usr/local/libexec/Serv
+d071242            958   0.0  0.1   768884  19388   ??  S    11:30AM   0:01.44 /Library/Application Su
+d071242            957   0.0  0.1  4334520  17272   ??  S    11:30AM   0:00.20 /System/Library/CoreSer
+d071242            956   0.0  0.1  4353360  18776   ??  S    11:30AM   0:00.29 /System/Library/Private
+d071242            955   0.0  0.2  4400980  25420   ??  S    11:30AM   0:03.26 /usr/local/libexec/Rece
+d071242            953   0.0  0.1  4331988  19052   ??  S    11:30AM   0:00.09 /System/Library/CoreSer
+d071242            952   0.0  0.1  4332364  17968   ??  S    11:30AM   0:00.35 /usr/libexec/knowledge-
+d071242            951   0.0  0.1  4350164  14924   ??  S    11:30AM   0:00.31 /System/Library/CoreSer
+d071242            949   0.0  0.1  4316252  10904   ??  S    11:30AM   0:00.06 /Library/Application Su
+d071242            946   0.0  0.1   708864  11816   ??  S    11:30AM   0:00.65 /Library/Application Su
+d071242            945   0.0  0.2  4393144  27220   ??  S    11:30AM   0:00.55 /Applications/ForeScout
+d071242            943   0.0  0.1  4333036  17636   ??  S    11:30AM   0:00.33 /System/Library/Image C
+d071242            942   0.0  0.1  4331104  12640   ??  S    11:30AM   0:00.06 /usr/libexec/dmd
+d071242            940   0.0  0.3  4427256  43424   ??  S    11:30AM   0:03.79 /Applications/Enterpris
+root               939   0.0  0.1  4332088  11500   ??  SN   11:30AM   0:00.26 /usr/local/jamf/bin/jam
+d071242            937   0.0  0.1  4330712  10964   ??  S    11:30AM   0:00.04 /System/Library/CoreSer
+d071242            935   0.0  0.1  4370984  16052   ??  S    11:30AM   0:00.24 /usr/sbin/ckkeyrolld
+d071242            934   0.0  0.2  4338792  34696   ??  S    11:30AM   0:00.68 /usr/libexec/routined L
+d071242            931   0.0  0.1  4305324  10624   ??  S    11:30AM   0:00.05 /System/Library/Private
+d071242            928   0.0  0.2  4339856  31852   ??  S    11:30AM   0:00.25 /System/Library/Private
+_fpsd              915   0.0  0.1  4308668   8656   ??  Ss   11:30AM   0:00.05 /System/Library/Private
+d071242            914   0.0  0.1  4375660  17784   ??  S    11:30AM   0:00.26 /System/Library/Private
+d071242            898   0.0  0.1  4354428  16240   ??  S    11:30AM   0:00.58 /System/Library/CoreSer
+d071242            897   0.0  0.1  4377520  24268   ??  S    11:30AM   0:00.36 /System/Library/Private
+d071242            896   0.0  0.1  4367476  12976   ??  S    11:30AM   0:00.26 /System/Library/Private
+d071242            895   0.0  0.1  4304500   8632   ??  S    11:30AM   0:00.02 /System/Library/Private
+d071242            894   0.0  0.1  4331496  10320   ??  S    11:30AM   0:01.48 /System/Library/Private
+d071242            893   0.0  0.7  4617136 117440   ??  S    11:30AM   0:04.34 /System/Library/Service
+d071242            892   0.0  0.2  4337076  29212   ??  Ss   11:30AM   0:00.40 /System/Library/Private
+d071242            891   0.0  0.1  4333928  23300   ??  S    11:30AM   0:00.24 /System/Library/Private
+d071242            889   0.0  0.2  4338940  33716   ??  S    11:30AM   0:00.79 /System/Library/Private
+d071242            888   0.0  0.0  4304420   5012   ??  Ss   11:30AM   0:00.02 /System/Library/Private
+d071242            887   0.0  0.0  4331712   7184   ??  S    11:30AM   0:00.09 /System/Library/CoreSer
+d071242            886   0.0  0.1  4353276  15936   ??  Ss   11:30AM   0:02.45 /System/Library/Input M
+d071242            885   0.0  0.1  4344732  16716   ??  Ss   11:30AM   0:00.48 /System/Library/Input M
+d071242            884   0.0  0.1  4331244  16288   ??  S    11:30AM   0:00.04 /System/Library/Private
+root               883   0.0  0.1  4331432  11944   ??  Ss   11:30AM   0:00.08 /System/Library/CoreSer
+d071242            881   0.0  0.1  4306216  15140   ??  S    11:30AM   0:00.06 /System/Library/Private
+d071242            879   0.0  0.1  4333808  12444   ??  S    11:30AM   0:00.24 /System/Library/Framewo
+d071242            878   0.0  0.1  4332060  12680   ??  Ss   11:30AM   0:00.08 /System/Library/Private
+d071242            877   0.0  0.1  4332452  19728   ??  S    11:30AM   0:00.12 /usr/libexec/fmfd
+d071242            876   0.0  0.2  4353032  31456   ??  S    11:30AM   0:00.32 /System/Library/Private
+d071242            875   0.0  0.1  4332060  12808   ??  Ss   11:30AM   0:00.10 /System/Library/Private
+d071242            874   0.0  0.1  4305852  12164   ??  S    11:30AM   0:00.07 /usr/libexec/rapportd
+root               872   0.0  0.1  4331796  19084   ??  Ss   11:30AM   0:00.07 /usr/libexec/findmydevi
+d071242            871   0.0  0.1  4350636  15144   ??  S    11:30AM   0:00.25 /System/Library/CoreSer
+d071242            870   0.0  0.1  4304724  12124   ??  Ss   11:30AM   0:00.09 /System/Library/Private
+d071242            868   0.0  0.3  4396500  49836   ??  S    11:30AM   0:01.42 /System/Library/CoreSer
+d071242            866   0.0  0.1  4330812   9364   ??  S    11:30AM   0:00.03 /System/Library/Framewo
+root               865   0.0  0.1  4332288   8700   ??  Ss   11:30AM   0:00.09 /usr/sbin/wirelessproxd
+d071242            864   0.0  0.1  4330788   8920   ??  S    11:30AM   0:00.16 /Applications/iTunes.ap
+d071242            863   0.0  0.2  4344120  35508   ??  S    11:30AM   0:00.88 /usr/libexec/sharingd
+d071242            862   0.0  0.1  4334024  12252   ??  S    11:30AM   0:00.32 /usr/libexec/nsurlstora
+d071242            861   0.0  0.1  4304420  11656   ??  S    11:30AM   0:00.03 /System/Library/Private
+d071242            860   0.0  0.1  4333760  13176   ??  S    11:30AM   0:00.48 /usr/sbin/usernoted
+d071242            859   0.0  0.2  4364436  31076   ??  Ss   11:30AM   0:00.69 /System/Library/CoreSer
+root               858   0.0  0.0  4309636   6540   ??  Ss   11:30AM   0:00.04 /usr/sbin/filecoordinat
+d071242            857   0.0  0.3  4455028  47640   ??  S    11:30AM   0:01.61 /System/Library/CoreSer
+d071242            855   0.0  0.1  4333456  14560   ??  S    11:30AM   0:00.42 /usr/libexec/secinitd
+d071242            854   0.0  0.8  5712044 128664   ??  S    11:30AM   0:24.09 /Applications/Skype for
+d071242            853   0.0  0.0  4304836   5756   ??  S    11:30AM   0:00.03 /System/Library/Framewo
+d071242            852   0.0  0.1  4304488  15276   ??  S    11:30AM   0:00.10 /System/Library/Framewo
+d071242            851   0.0  0.3  4436216  42768   ??  S    11:30AM   0:03.55 /Applications/Enterpris
+d071242            850   0.0  0.1  4306216  10052   ??  S    11:30AM   0:00.03 /System/Library/Framewo
+d071242            849   0.0  0.0  4305108   7060   ??  S    11:30AM   0:00.09 /System/Library/CoreSer
+d071242            848   0.0  0.1  4305748  10144   ??  S    11:30AM   0:00.03 /System/Library/Framewo
+d071242            847   0.0  0.1  4332980  10512   ??  S    11:30AM   0:00.33 /System/Library/Private
+d071242            845   0.0  0.1  4331268  14256   ??  S    11:30AM   0:00.06 /System/Library/Private
+d071242            844   0.0  0.1  4365412  13152   ??  S    11:30AM   0:02.23 /System/Library/Framewo
+d071242            843   0.0  0.1  4305684  16204   ??  S    11:30AM   0:00.11 /System/Library/Private
+d071242            841   0.0  0.1  4332496  22088   ??  S    11:30AM   0:00.22 /System/Library/Private
+d071242            840   0.0  0.1  4342168  24792   ??  S    11:30AM   0:00.33 /System/Library/Private
+d071242            838   0.0  0.2  4338184  30332   ??  S    11:30AM   0:00.40 /System/Library/Private
+root               837   0.0  0.1  4331496  17584   ??  Ss   11:30AM   0:00.08 /usr/sbin/WirelessRadio
+d071242            836   0.0  0.1  4373620  15868   ??  S    11:30AM   0:00.38 /usr/libexec/nsurlsessi
+d071242            835   0.0  0.1  4334864  11608   ??  S    11:30AM   0:00.28 /System/Library/Framewo
+d071242            834   0.0  0.2  4378008  30812   ??  S    11:30AM   0:00.91 /System/Library/Private
+d071242            833   0.0  0.1  4332408  12876   ??  S    11:30AM   0:01.03 /usr/libexec/pkd
+d071242            832   0.0  0.1  4333416  11196   ??  S    11:30AM   0:00.32 /System/Library/Private
+d071242            830   0.0  0.1  4332532   8952   ??  S    11:30AM   0:00.31 /System/Library/CoreSer
+root               828   0.0  0.0  4331916   7416   ??  Ss   11:30AM   0:00.04 /System/Library/Private
+root               827   0.0  0.1  4336384   9940   ??  Ss   11:30AM   0:00.17 /usr/sbin/systemsoundse
+d071242            826   0.0  0.1  4331780  15032   ??  S    11:30AM   0:00.11 /System/Library/Private
+d071242            825   0.0  0.0  4305540   6904   ??  S    11:30AM   0:00.34 /usr/libexec/pboard
+d071242            823   0.0  0.1  4335668  14552   ??  S    11:30AM   0:00.30 /usr/libexec/secd
+d071242            821   0.0  0.6  4519148 108640   ??  S    11:30AM   0:06.29 /System/Library/CoreSer
+d071242            820   0.0  0.2  4393708  39884   ??  S    11:30AM   0:04.19 /System/Library/CoreSer
+d071242            819   0.0  0.1  4350228  14552   ??  S    11:30AM   0:00.44 /System/Library/CoreSer
+d071242            818   0.0  0.4  4421616  61272   ??  S    11:30AM   0:03.67 /System/Library/CoreSer
+d071242            817   0.0  0.1  4349672  25148   ??  S    11:30AM   0:03.21 /usr/libexec/trustd --a
+d071242            815   0.0  0.1  4336752  10200   ??  S    11:30AM   0:00.65 /usr/libexec/lsd
+d071242            813   0.0  0.2  4343808  29772   ??  S    11:30AM   0:01.17 /System/Library/Framewo
+d071242            812   0.0  0.1  4336436  12320   ??  S    11:30AM   0:00.60 /usr/sbin/universalacce
+d071242            811   0.0  0.0  4305588   6472   ??  S    11:30AM   0:01.79 /usr/sbin/distnoted age
+d071242            809   0.0  0.2  4337540  30156   ??  S    11:30AM   0:01.12 /usr/libexec/UserEventA
+d071242            808   0.0  0.0  4305148   3708   ??  S    11:30AM   0:01.54 /usr/sbin/cfprefsd agen
+root               801   0.0  0.1  4379368  18912   ??  Ss   11:30AM   0:00.26 /System/Library/Private
+root               799   0.0  0.4  4367556  69228   ??  Ss   11:30AM   0:02.30 /usr/sbin/spindump
+root               796   0.0  0.1  4331336  10120   ??  Ss   11:30AM   0:01.25 /System/Library/Private
+root               794   0.0  0.0  4305120   8044   ??  Ss   11:30AM   0:00.02 /System/Library/CoreSer
+root               788   0.0  0.0  4306136   5820   ??  Ss   11:30AM   0:00.02 /usr/libexec/securityd_
+root               759   0.0  0.1  4306200  15004   ??  Ss   11:30AM   0:00.07 /System/Library/Private
+root               742   0.0  0.1  4296512   8440   ??  Ss   11:30AM   0:00.02 /System/Library/Framewo
+root               707   0.0  0.2  4412844  39732   ??  Ss   11:30AM   0:00.48 /System/Library/Framewo
+root               676   0.0  0.1  4309368  11104   ??  Ss   11:30AM   0:00.04 /System/Library/CoreSer
+root               633   0.0  0.0  4296440   1192   ??  Ss   11:30AM   0:00.01 /System/Library/Framewo
+root               536   0.0  0.0  4307204   6164   ??  Ss   11:30AM   0:00.05 /System/Library/Private
+_nsurlstoraged     510   0.0  0.0  4304992   6524   ??  Ss   11:30AM   0:00.06 /usr/libexec/nsurlstora
+root               448   0.0  0.0  4331052   5892   ??  Ss   11:30AM   0:00.02 /usr/libexec/biokitaggd
+root               429   0.0  0.1  4332368  10228   ??  S    11:30AM   0:00.08 /usr/sbin/systemstats -
+root               438   0.0  0.1  4304788   9632   ??  Ss   11:30AM   0:00.05 /System/Library/Framewo
+root               430   0.0  0.1   679976  14204   ??  S    11:30AM   0:04.92 /usr/local/McAfee/AntiM
+root               397   0.0  0.1  4314628  10784   ??  Ss   11:30AM   0:00.39 /usr/libexec/diskmanage
+root               395   0.0  0.0  4332056   7356   ??  Ss   11:30AM   0:00.09 /System/Library/CoreSer
+root               393   0.0  0.0  4305192   4468   ??  Ss   11:30AM   0:00.01 /System/Library/Framewo
+root               391   0.0  0.0  4305800   5732   ??  Ss   11:30AM   0:00.47 /System/Library/Private
+root               384   0.0  0.0  4305072   6064   ??  Ss   11:30AM   0:00.04 /System/Library/Private
+root               381   0.0  0.0  4304660   4408   ??  Ss   11:30AM   0:00.01 /usr/libexec/smd
+root               378   0.0  0.0  4304936   5272   ??  Ss   11:30AM   0:00.04 /System/Library/Private
+root               373   0.0  0.1  4305716   9784   ??  Ss   11:30AM   0:00.03 /System/Library/Framewo
+root               363   0.0  0.1  4331928  11016   ??  Ss   11:30AM   0:00.05 /System/Library/Private
+root               359   0.0  0.1  4305376  10356   ??  Ss   11:30AM   0:00.03 /usr/libexec/bootinstal
+_netbios           356   0.0  0.1  4307596  10420   ??  SNs  11:30AM   0:00.60 /usr/sbin/netbiosd
+root               354   0.0  0.0  4306360   7880   ??  Ss   11:30AM   0:00.20 /System/Library/Framewo
+root               350   0.0  0.0  4305352   5804   ??  Ss   11:30AM   0:00.04 /usr/libexec/colorsyncd
+root               343   0.0  0.0  4305148   6388   ??  Ss   11:30AM   0:00.16 /usr/libexec/colorsync.
+root               341   0.0  0.0  4330492   2648   ??  Ss   11:30AM   0:00.03 /System/Library/Framewo
+root               339   0.0  0.1  4367100  19648   ??  Ss   11:30AM   0:11.59 /usr/libexec/TouchBarSe
+_coreaudiod        327   0.0  0.1  4304704   8448   ??  Ss   11:30AM   0:00.02 /System/Library/Framewo
+root               324   0.0  0.0  4306140   7656   ??  Ss   11:30AM   0:00.05 /System/Library/Framewo
+root               301   0.0  0.0  4332968   7660   ??  Ss   11:30AM   0:00.53 /usr/libexec/sandboxd
+root               298   0.0  1.1  5039680 190404   ??  Ss   11:30AM   0:16.47 /System/Library/Framewo
+root               297   0.0  0.1  4304472  10484   ??  Ss   11:30AM   0:00.02 /usr/libexec/thermald
+root               289   0.0  0.0  4305436   4428   ??  Ss   11:30AM   0:00.05 /usr/libexec/watchdogd
+root               288   0.0  0.0  4304412   5296   ??  Ss   11:30AM   0:00.03 /usr/libexec/eoshostd
+root               287   0.0  0.1  4335240   9672   ??  Ss   11:30AM   0:00.31 /usr/libexec/lsd runAsR
+root               284   0.0  0.1  4335180  14684   ??  Ss   11:30AM   0:00.60 /usr/libexec/mobileasse
+root               264   0.0  0.0   602840   1352   ??  S    11:30AM   0:00.01 /Library/Frameworks/Vir
+_softwareupdate    260   0.0  4.2  6101796 709060   ??  Ss   11:30AM   0:22.89 /System/Library/CoreSer
+root               259   0.0  0.0  4288500    804   ??  SNs  11:30AM   0:00.01 /usr/libexec/periodic-w
+root               236   0.0  0.1  4338548  18720   ??  Ss   11:30AM   0:00.81 /usr/libexec/syspolicyd
+postgres           235   0.0  0.0  4482332   1708   ??  Ss   11:30AM   0:00.00 postgres: bgworker: log
+postgres           234   0.0  0.0  4337264    948   ??  Ss   11:30AM   0:00.10 postgres: stats collect
+postgres           233   0.0  0.0  4307128    936   ??  Ss   11:30AM   0:00.10 postgres: stats collect
+postgres           232   0.0  0.0  4482332   2096   ??  Ss   11:30AM   0:00.05 postgres: autovacuum la
+postgres           231   0.0  0.0  4452128   2040   ??  Ss   11:30AM   0:00.05 postgres: autovacuum la
+postgres           230   0.0  0.0  4482332   5248   ??  Ss   11:30AM   0:00.05 postgres: wal writer pr
+postgres           229   0.0  0.0  4452128   1032   ??  Ss   11:30AM   0:00.04 postgres: wal writer pr
+postgres           228   0.0  0.0  4482332   2356   ??  Ss   11:30AM   0:00.07 postgres: writer proces
+postgres           227   0.0  0.0  4452128   2052   ??  Ss   11:30AM   0:00.07 postgres: writer proces
+postgres           226   0.0  0.0  4482332   2588   ??  Ss   11:30AM   0:00.01 postgres: checkpointer 
+postgres           225   0.0  0.0  4452128   1120   ??  Ss   11:30AM   0:00.00 postgres: checkpointer 
+postgres           219   0.0  0.0  4307128    872   ??  Ss   11:30AM   0:00.00 postgres: logger proces
+postgres           218   0.0  0.0  4337264    860   ??  Ss   11:30AM   0:00.00 postgres: logger proces
+root               215   0.0  0.0  4304664   4836   ??  Ss   11:30AM   0:00.40 /usr/libexec/sysmond
+root               213   0.0  0.1  4332760  12872   ??  Ss   11:30AM   0:00.09 /usr/libexec/secinitd
+root               212   0.0  0.0  4304956   5140   ??  Ss   11:30AM   0:00.27 /System/Library/Private
+root               211   0.0  0.1  4304476   8852   ??  Ss   11:30AM   0:00.02 /System/Library/CryptoT
+root               210   0.0  0.0  4331168   7068   ??  Ss   11:30AM   0:00.09 /usr/libexec/powerlogd
+root               209   0.0  0.1  4331792  10260   ??  Ss   11:30AM   0:00.35 /usr/libexec/usbd
+_cmiodalassistants   208   0.0  0.1  4359776  13076   ??  Ss   11:30AM   0:00.10 /System/Library/Framewo
+root               207   0.0  0.1  4331984  13204   ??  Ss   11:30AM   0:00.11 /usr/libexec/biometrick
+root               206   0.0  0.0  4296712   4480   ??  Ss   11:30AM   0:00.01 /usr/libexec/xartstorag
+root               204   0.0  0.0  4304408   5140   ??  Ss   11:30AM   0:00.02 /usr/libexec/apfsd
+_networkd          203   0.0  0.1  4339304  11600   ??  Ss   11:30AM   0:01.08 /usr/libexec/symptomsd
+_windowserver      201   0.0  1.4  6223596 237424   ??  Ss   11:30AM   2:35.32 /System/Library/Private
+root               184   0.0  0.1  4337892  10708   ??  Ss   11:30AM   0:06.56 /usr/libexec/Applicatio
+root               183   0.0  0.0  4287480   1320   ??  Ss   11:30AM   0:00.02 /usr/sbin/cron
+_nsurlsessiond     182   0.0  0.1  4376472  15860   ??  Ss   11:30AM   0:00.41 /usr/libexec/nsurlsessi
+_analyticsd        178   0.0  0.1  4331984   8856   ??  Ss   11:30AM   0:00.15 /System/Library/Private
+root               177   0.0  0.1  4334484  10184   ??  Ss   11:30AM   0:00.30 /System/Library/Private
+root               170   0.0  0.1  4341364  17624   ??  Ss   11:30AM   0:03.53 /usr/libexec/airportd
+root               168   0.0  0.0  4331636   6252   ??  Ss   11:30AM   0:00.23 /usr/sbin/mDNSResponder
+_mdnsresponder     167   0.0  0.1  4333412   8896   ??  Ss   11:30AM   0:02.28 /usr/sbin/mDNSResponder
+_coreaudiod        165   0.0  0.0  4331092   6804   ??  Ss   11:30AM   0:00.12 /System/Library/Framewo
+_coreaudiod        157   0.0  0.1  4313512  14976   ??  Ss   11:30AM   0:01.41 /usr/sbin/coreaudiod
+root               155   0.0  0.0  4332188   8024   ??  Ss   11:30AM   0:00.41 /usr/sbin/ocspd
+root               151   0.0  0.1  4336644   9060   ??  Ss   11:30AM   0:00.09 /usr/libexec/nehelper
+root               148   0.0  0.0  4305508   4768   ??  Ss   11:30AM   0:00.03 aslmanager
+_ctkd              147   0.0  0.1  4306196   9664   ??  Ss   11:30AM   0:00.03 /System/Library/Framewo
+root               146   0.0  0.0  4304992   8316   ??  Ss   11:30AM   0:00.02 /System/Library/Framewo
+root               145   0.0  0.1  4340320  17756   ??  Ss   11:30AM   0:09.16 /usr/libexec/trustd
+root               129   0.0  0.1  4346428  10920   ??  Ss   11:30AM   0:01.20 /System/Library/CoreSer
+root               128   0.0  0.0  4296744   6388   ??  Ss   11:30AM   0:00.21 /usr/libexec/taskgated 
+root               127   0.0  0.1  4334488  11584   ??  Ss   11:30AM   0:01.21 /System/Library/Framewo
+root               125   0.0  0.0  4304964   3556   ??  Ss   11:30AM   0:01.99 /usr/sbin/cfprefsd daem
+_distnote          124   0.0  0.0  4305588   4408   ??  Ss   11:30AM   0:00.59 /usr/sbin/distnoted dae
+root               123   0.0  0.0  4304692   2164   ??  Ss   11:30AM   0:04.58 /usr/sbin/notifyd
+root               122   0.0  0.1  4336256  13264   ??  Ss   11:30AM   0:02.71 /usr/libexec/amfid
+root               121   0.0  0.1  4332328  12760   ??  Ss   11:30AM   0:00.21 /usr/libexec/AirPlayXPC
+root               120   0.0  0.1  4336284  18024   ??  Ss   11:30AM   0:00.20 /usr/libexec/corebright
+_hidd              119   0.0  0.0  4334456   8300   ??  Ss   11:30AM   0:50.22 /usr/libexec/hidd
+root               117   0.0  0.1  4335884  11936   ??  Ss   11:30AM   0:00.41 /usr/sbin/bluetoothd
+root               115   0.0  0.0  4296464   4380   ??  Ss   11:30AM   0:00.01 /usr/sbin/KernelEventAg
+root               114   0.0  0.1  4338512   8480   ??  Ss   11:30AM   0:00.09 /System/Library/Private
+root               113   0.0  0.0  4304496   5892   ??  Ss   11:30AM   0:00.05 /System/Library/CoreSer
+d071242            112   0.0  1.2  4574140 202608   ??  Ss   11:30AM   0:02.89 /System/Library/CoreSer
+root               110   0.0  0.0   664752   7104   ??  Ss   11:30AM   0:07.12 /usr/local/McAfee/AntiM
+root               108   0.0  0.1  4336008  11628   ??  Ss   11:30AM   0:00.63 /usr/libexec/dasd
+_displaypolicyd    105   0.0  0.1  4307560   9820   ??  Ss   11:30AM   0:00.27 /usr/libexec/displaypol
+root               104   0.0  0.0  4304628   4972   ??  Ss   11:30AM   0:00.02 autofsd
+root               103   0.0  0.1   641160   9028   ??  Ss   11:30AM   0:01.37 /usr/local/McAfee/fmp/b
+postgres           102   0.0  0.1  4452384  17016   ??  Ss   11:30AM   0:00.07 /Library/PostgreSQL/9.6
+_locationd         101   0.0  0.1  4337964  14248   ??  Ss   11:30AM   0:00.90 /usr/libexec/locationd
+_usbmuxd            99   0.0  0.0  4331244   5888   ??  Ss   11:30AM   0:00.06 /System/Library/Private
+root                98   0.0  0.1  4334448  10940   ??  Ss   11:30AM   0:01.60 /usr/sbin/securityd -i
+_timed              97   0.0  0.0  4330872   6544   ??  Ss   11:30AM   0:00.10 /usr/libexec/timed
+root                96   0.0  0.1  4332596  10532   ??  Ss   11:30AM   0:02.52 /System/Library/CoreSer
+root                95   0.0  0.0  4297096   5752   ??  Ss   11:30AM   0:00.02 /System/Library/Private
+root                94   0.0  0.0  4295724   4608   ??  Ss   11:30AM   0:00.01 /Library/PrivilegedHelp
+root                93   0.0  0.1  4338148  21008   ??  Ss   11:30AM   0:00.83 /System/Library/Private
+root                92   0.0  0.1  4351792  17216   ??  Ss   11:30AM   0:13.04 /usr/libexec/opendirect
+root                89   0.0  1.0   818860 171552   ??  Ss   11:30AM   0:13.21 /usr/local/McAfee/AntiM
+root                88   0.0  0.1  4354740  20916   ??  Ss   11:30AM   0:01.28 /Applications/ForeScout
+root                87   0.0  0.2  4339096  30924   ??  Ss   11:30AM   0:01.48 /usr/libexec/coreduetd
+root                86   0.0  0.2  4331312  26036   ??  Ss   11:30AM   0:00.08 /System/Library/CoreSer
+root                82   0.0  0.0  4330644   6560   ??  Ss   11:30AM   0:00.41 /usr/libexec/diskarbitr
+root                81   0.0  0.1  4311644   8564   ??  Ss   11:30AM   0:00.11 /System/Library/CoreSer
+_iconservices       80   0.0  0.0  4306136   6176   ??  Ss   11:30AM   0:00.03 /System/Library/CoreSer
+root                79   0.0  0.5  4445052  77960   ??  Ss   11:30AM   0:08.45 /System/Library/Framewo
+root                78   0.0  0.1  4337708  16120   ??  SNs  11:30AM   0:00.34 /usr/libexec/warmd
+root                74   0.0  0.1   646124  12792   ??  Ss   11:30AM   0:08.83 /Library/McAfee/agent/b
+root                72   0.0  0.0  4305064   4500   ??  Ss   11:30AM   0:00.02 /usr/libexec/keybagd -t
+root                71   0.0  0.1  4398116  18304   ??  Ss   11:30AM   0:03.16 /usr/libexec/logd
+postgres            68   0.0  0.1  4482588  17612   ??  Ss   11:30AM   0:00.07 /Library/PostgreSQL/10/
+root                67   0.0  0.0  4331144   6004   ??  Ss   11:30AM   0:00.05 /Library/Application Su
+root                66   0.0  0.1  4318136  11644   ??  Ss   11:30AM   0:00.08 /Library/Application Su
+root                65   0.0  0.1  4316424  16776   ??  Ss   11:30AM   0:02.57 /Library/McAfee/agent/b
+mfe                 64   0.0  0.1  4314524  12860   ??  Ss   11:30AM   0:00.44 /Library/McAfee/agent/b
+root                63   0.0  0.1  4331412   9960   ??  Ss   11:30AM   0:03.35 /System/Library/CoreSer
+root                62   0.0  0.1  4336068  11576   ??  Ss   11:30AM   0:01.66 /usr/libexec/configd
+root                60   0.0  0.1  4338184  13632   ??  Ss   11:30AM   0:00.88 /usr/sbin/systemstats -
+_appleevents        59   0.0  0.1  4333464   9888   ??  Ss   11:30AM   0:00.22 /System/Library/CoreSer
+root                57   0.0  0.1  4332284  19416   ??  Ss   11:30AM   0:00.16 /System/Library/Private
+root                56   0.0  0.1  4376240  18900   ??  SNs  11:30AM   0:00.76 /usr/local/jamf/bin/jam
+root                55   0.0  0.0   653316   6972   ??  Ss   11:30AM   0:00.21 /usr/local/McAfee/AntiM
+root                53   0.0  0.1  4312584  10952   ??  Ss   11:30AM   0:03.02 /System/Library/Framewo
+root                52   0.0  0.1  4345464  22860   ??  Ss   11:30AM   0:03.30 /usr/libexec/kextd
+root                51   0.0  0.1  4304200   8456   ??  Ss   11:30AM   0:00.19 /System/Library/Private
+root                48   0.0  0.1  4337260  17460   ??  Ss   11:30AM   0:01.43 /usr/libexec/UserEventA
+root                47   0.0  0.0  4305532   1792   ??  Ss   11:30AM   0:00.58 /usr/sbin/syslogd
+root              3535   0.0  0.0  4268200   1124 s002  R+    1:33PM   0:00.00 ps aux
+root                 1   0.0  0.1  4326460  17136   ??  Ss   11:30AM   0:10.98 /sbin/launchd
+d071242           3531   0.0  0.1  4353684  22968   ??  Ss    1:32PM   0:00.23 /System/Library/Framewo
+d071242           3530   0.0  0.1  4339276  16700   ??  S     1:32PM   0:00.08 /System/Library/Framewo
+d071242           3519   0.0  0.1  4851992  18244   ??  S     1:31PM   0:00.15 /System/Library/Framewo
+d071242           3516   0.0  1.2  5270196 194184   ??  S     1:31PM   0:00.59 /private/var/folders/d6
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ kill -9 239
+-bash: kill: (239) - No such process
+C02T427GHF1R:nboxdb-dump d071242$ post
+post-grohtml  postconf      postgres      postlog       postmulti     
+postalias     postdrop      postkick      postmap       postqueue     
+postcat       postfix       postlock      postmaster    postsuper     
+C02T427GHF1R:nboxdb-dump d071242$ which postgres
+/Applications/Postgres.app/Contents/Versions/latest/bin/postgres
+C02T427GHF1R:nboxdb-dump d071242$ psql -U postgres -help
+psql: could not connect to server: Connection refused
+	Is the server running on host "elp" (10.21.21.90) and accepting
+	TCP/IP connections on port 5432?
+C02T427GHF1R:nboxdb-dump d071242$ psql -help
+psql: could not connect to server: Connection refused
+	Is the server running on host "elp" (10.21.21.90) and accepting
+	TCP/IP connections on port 5432?
+C02T427GHF1R:nboxdb-dump d071242$ psql --help
+psql is the PostgreSQL interactive terminal.
+
+Usage:
+  psql [OPTION]... [DBNAME [USERNAME]]
+
+General options:
+  -c, --command=COMMAND    run only single command (SQL or internal) and exit
+  -d, --dbname=DBNAME      database name to connect to (default: "d071242")
+  -f, --file=FILENAME      execute commands from file, then exit
+  -l, --list               list available databases, then exit
+  -v, --set=, --variable=NAME=VALUE
+                           set psql variable NAME to VALUE
+                           (e.g., -v ON_ERROR_STOP=1)
+  -V, --version            output version information, then exit
+  -X, --no-psqlrc          do not read startup file (~/.psqlrc)
+  -1 ("one"), --single-transaction
+                           execute as a single transaction (if non-interactive)
+  -?, --help[=options]     show this help, then exit
+      --help=commands      list backslash commands, then exit
+      --help=variables     list special variables, then exit
+
+Input and output options:
+  -a, --echo-all           echo all input from script
+  -b, --echo-errors        echo failed commands
+  -e, --echo-queries       echo commands sent to server
+  -E, --echo-hidden        display queries that internal commands generate
+  -L, --log-file=FILENAME  send session log to file
+  -n, --no-readline        disable enhanced command line editing (readline)
+  -o, --output=FILENAME    send query results to file (or |pipe)
+  -q, --quiet              run quietly (no messages, only query output)
+  -s, --single-step        single-step mode (confirm each query)
+  -S, --single-line        single-line mode (end of line terminates SQL command)
+
+Output format options:
+  -A, --no-align           unaligned table output mode
+  -F, --field-separator=STRING
+                           field separator for unaligned output (default: "|")
+  -H, --html               HTML table output mode
+  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \pset command)
+  -R, --record-separator=STRING
+                           record separator for unaligned output (default: newline)
+  -t, --tuples-only        print rows only
+  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, border)
+  -x, --expanded           turn on expanded table output
+  -z, --field-separator-zero
+                           set field separator for unaligned output to zero byte
+  -0, --record-separator-zero
+                           set record separator for unaligned output to zero byte
+
+Connection options:
+  -h, --host=HOSTNAME      database server host or socket directory (default: "local socket")
+  -p, --port=PORT          database server port (default: "5432")
+  -U, --username=USERNAME  database user name (default: "d071242")
+  -w, --no-password        never prompt for password
+  -W, --password           force password prompt (should happen automatically)
+
+For more information, type "\?" (for internal commands) or "\help" (for SQL
+commands) from within psql, or consult the psql section in the PostgreSQL
+documentation.
+
+Report bugs to <pgsql-bugs@postgresql.org>.
+C02T427GHF1R:nboxdb-dump d071242$ psql -U postgres -p 5435
+psql (10.4, server 9.6.9)
+Type "help" for help.
+
+postgres=# /q
+postgres-# exit#
+postgres-# quit
+postgres-# quit
+postgres-# 
+postgres-# 
+postgres=# 
+postgres=# 
+postgres=# ^D\q
+C02T427GHF1R:nboxdb-dump d071242$ psql -p 5435
+psql (10.4, server 9.6.9)
+Type "help" for help.
+
+d071242=# bzcat 

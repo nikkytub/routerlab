@@ -1,0 +1,1353 @@
+C02T427GHF1R:nboxdb-dump d071242$ ls
+netbox_2018-07-01.Sunday.sql.bz2	netbox_2018-07-03.Tuesday.sql.bz2
+netbox_2018-07-02.Monday.sql		psql.txt
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ 
+C02T427GHF1R:nboxdb-dump d071242$ bzcat netbox_2018-07-01.Sunday.sql.bz2 | psql -d netbox -p 5435
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+ERROR:  database "netbox" already exists
+ALTER DATABASE
+You are now connected to database "netbox" as user "d071242".
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE EXTENSION
+COMMENT
+SET
+SET
+SET
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+CREATE TABLE
+ERROR:  role "netbox" does not exist
+CREATE SEQUENCE
+ERROR:  role "netbox" does not exist
+ALTER SEQUENCE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+COPY 2
+ setval 
+--------
+      2
+(1 row)
+
+COPY 134
+ setval 
+--------
+    192
+(1 row)
+
+COPY 198
+ setval 
+--------
+    198
+(1 row)
+
+COPY 49
+COPY 1
+ setval 
+--------
+      3
+(1 row)
+
+ setval 
+--------
+     54
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 12
+ setval 
+--------
+     12
+(1 row)
+
+COPY 8
+ setval 
+--------
+      9
+(1 row)
+
+COPY 3
+ setval 
+--------
+      3
+(1 row)
+
+COPY 3
+ setval 
+--------
+      3
+(1 row)
+
+COPY 1083
+ setval 
+--------
+   1357
+(1 row)
+
+COPY 49
+ setval 
+--------
+     56
+(1 row)
+
+COPY 2263
+ setval 
+--------
+   2599
+(1 row)
+
+COPY 48
+ setval 
+--------
+     49
+(1 row)
+
+COPY 3211
+ setval 
+--------
+   4057
+(1 row)
+
+COPY 1399
+ setval 
+--------
+   3145
+(1 row)
+
+COPY 54
+ setval 
+--------
+     87
+(1 row)
+
+COPY 24
+ setval 
+--------
+     27
+(1 row)
+
+COPY 75
+ setval 
+--------
+     80
+(1 row)
+
+COPY 43340
+ setval 
+--------
+  56124
+(1 row)
+
+COPY 63
+ setval 
+--------
+     72
+(1 row)
+
+COPY 7509
+ setval 
+--------
+   9373
+(1 row)
+
+COPY 1257
+ setval 
+--------
+   1858
+(1 row)
+
+COPY 6048
+COPY 19
+ setval 
+--------
+     23
+(1 row)
+
+ setval 
+--------
+   8848
+(1 row)
+
+COPY 15
+ setval 
+--------
+     16
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 0
+ setval 
+--------
+      2
+(1 row)
+
+COPY 5378
+ setval 
+--------
+   6954
+(1 row)
+
+COPY 139
+ setval 
+--------
+    197
+(1 row)
+
+COPY 437
+ setval 
+--------
+    509
+(1 row)
+
+COPY 58
+ setval 
+--------
+     66
+(1 row)
+
+COPY 8
+ setval 
+--------
+     11
+(1 row)
+
+COPY 6
+ setval 
+--------
+      6
+(1 row)
+
+COPY 25
+ setval 
+--------
+     26
+(1 row)
+
+COPY 33
+ setval 
+--------
+     33
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 77
+ setval 
+--------
+     77
+(1 row)
+
+COPY 65
+ setval 
+--------
+     65
+(1 row)
+
+COPY 121
+ setval 
+--------
+    121
+(1 row)
+
+COPY 348
+COPY 2
+ setval 
+--------
+      3
+(1 row)
+
+COPY 2
+ setval 
+--------
+      3
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 33
+ setval 
+--------
+     79
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 1
+ setval 
+--------
+      1
+(1 row)
+
+COPY 3
+ setval 
+--------
+     18
+(1 row)
+
+COPY 1
+ setval 
+--------
+      2
+(1 row)
+
+COPY 17940
+ setval 
+--------
+  17940
+(1 row)
+
+COPY 27
+ setval 
+--------
+     35
+(1 row)
+
+COPY 8211
+ setval 
+--------
+  15063
+(1 row)
+
+COPY 1234
+ setval 
+--------
+   3323
+(1 row)
+
+COPY 8
+ setval 
+--------
+      8
+(1 row)
+
+COPY 25
+ setval 
+--------
+     28
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 487
+ setval 
+--------
+    930
+(1 row)
+
+COPY 75
+ setval 
+--------
+     77
+(1 row)
+
+COPY 28
+ setval 
+--------
+     28
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 4
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+ setval 
+--------
+      4
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 0
+ setval 
+--------
+      1
+(1 row)
+
+COPY 2
+ setval 
+--------
+      2
+(1 row)
+
+COPY 9
+ setval 
+--------
+     10
+(1 row)
+
+COPY 2
+ setval 
+--------
+      3
+(1 row)
+
+COPY 8
+ setval 
+--------
+      9
+(1 row)
+
+COPY 122
+ setval 
+--------
+    280
+(1 row)
+
+COPY 4
+ setval 
+--------
+      4
+(1 row)
+
+COPY 4
+ setval 
+--------
+      4
+(1 row)
+
+COPY 76
+ setval 
+--------
+     81
+(1 row)
+
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+REVOKE
+REVOKE
+GRANT
+GRANT
+C02T427GHF1R:nboxdb-dump d071242$ 
